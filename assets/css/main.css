@@ -57,7 +57,7 @@ body {
 
 mark {
 	background-color: transparent;
-	color: #000000;
+	color: inherit;
 }
 
 input::-moz-focus-inner {
@@ -98,7 +98,7 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color: #000000;
+		color: #a2a2a2;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
