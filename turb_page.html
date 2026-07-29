@@ -38,10 +38,36 @@
 					
 
 					<h2 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">Objective</h2>
-					<p style="color: #333;">My Master's thesis research focuses on understanding the patterns, strength, and secondary effects of turbulence at the head of La Jolla Canyon, an underwater canyon located just off the coast of La Jolla Shores, CA. Turbulent mixing is a crucial process in coastal oceanography, influencing nutrient distribution, pollutant transport, and marine ecosystem dynamics. It also drives coastal upwelling, contributing to the local environment and adding a piece to the puzzle for global thermohaline circulation closure.</p>
+					<p style="color: #333;">My Master's thesis research focuses on understanding the patterns, strength, and secondary effects of turbulence at the head of La Jolla Canyon, an underwater canyon located just off the coast of La Jolla Shores, CA. Turbulent mixing is a crucial process in coastal oceanography, influencing nutrient distribution, pollutant transport, and marine ecosystem dynamics. It also drives coastal upwelling, contributing to the local environment prosperity and adding a piece to the puzzle for global thermohaline circulation closure.</p>
 					<p style="color: #333;">The head of La Jolla Canyon is located quite close to the shore of the ocean, nearly in the surf zone, so the dynamics of the flow are more complicated than other sites. I aim to calculate turbulent dissipation (the mixing rate or "strength" of turbulence) in the head using multiple instruments and methods. I will also show how flow through the canyon and turbulence can be visualized.</p>
 
 					</div>
+				</section>
+
+				<section id="three">
+					<h2 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">What is Turbulence?</h2>
+						
+					<div class="inner">
+						<p style="color: #333;">Turbulence is a branch of fluid dynamics dealing with irregular and chaotic flow. It occurs everywhere in the environment, dominating nearly all systems and engineering fluid applications. It can be good, such as providing nutrient transport in the ocean, or bad, such as severe weather events.</p>
+						<div class="image-block" style="margin-bottom: 2em;">
+							<a href="images/maelstrom.jpg" class="image fit thumb">
+								<img src="images/maelstrom.jpg" alt="Malestrom" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">Maelstrom (eddy) known as Saltstraumen in Norway. </strong><a href="https://www.youtube.com/watch?v=mhbV843K4BE" target="_blank">Source</a> </p>
+						</div>
+						<p style="color: #333;">Turbulence research is a very active and growing field, my goal here is to provide basic context to why and how we study turbulence. At it's core, turbulence is the driver of energy transfer. Lots of energy is held in large-scale fluid structures, often called eddies or vortices. Turbulence breaks eddies down into smaller ones, and then those are broken down into even smaller ones, it is a cascade of energy from large to small length scales. The eddies become smaller and smaller until the frictional forces dominate and the eddy is dissipated into heat. The rate at which eddies are broken down, or dissipated, depends on the strength of the turbulence.  </p>
+						<div class="image-block" style="margin-bottom: 2em;">
+							<a href="images/e_cascade.jpeg" class="image fit thumb">
+								<img src="images/e_cascade.jpeg" alt="Energy Cascade" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">Energy Cascade in Turbulent Flow. </strong><a href="https://doc.cfd.direct/notes/cfd-general-principles/energy-cascade" target="_blank">Source</a> </p>
+						</div>
+						<p style="color: #333;">The benefit (or detriment) of turbulence to the environment is how well it transports & mixes fluid. If nutrients are supplied from one location to a turublent flow, the energy cascade will spread out and mix the nutrients at much faster rate than molecular diffusion. If there is stronger/weaker mixing in particular locations it can lead to other phenomena such as upwelling or downwelling. On the other hand, it can also be an efficient way to spread pollutants around from a spill or drainage outlet.</p>
+					</div>
+
+					<p style="color: #333;">The goal of my research is identify how strong the turbulence is at the bottom of La Jolla Canyon. We also want to identify when the turbulence is strong or weak, look for patterns, and compare the values to other studies.</p>
 				</section>
 
 				<section id="two">
@@ -81,13 +107,149 @@
 					</div>
 				</section>
 
-			
+				<section id="four">
+    <h2 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">Measuring Turbulence</h2>
+    <div class="inner">
+        <p style="color: #333;">There are many ways to measure the strength of turbulence, such as hot wires, laser Doppler techniques, and acoustics. In the ocean, we target variables that we know turbulence will affect, flow velocity and temperature. </p>
+        <p style="color: #333;">Eddies has a distinct signature in the structure of fluid velocity, and as they break down from turbulence, the structure breaks down. This change is observed through creating spectra of the velocity timeseries. Spectra show much energy is contained within different length scales, and naturally it should decay as turbulence breaks things down. We apply a similar technique with temperature, turbulence should take temperature variations that exist in eddies and smooth them out as the eddies break down. </p>
+        <p style="color: #333;">Velocity can also be used to find turbulent dissipation by looking at structure functions. The idea here is that the velocity within an eddy is highly correlated, and velocities outside of the eddy are not. The rate at which velocity decorrelates from a fixed starting point yields the strength of the turbulence.</p>
+        <p style="color: #333;">Finally, turbulent dissipation can be found by looking at temperature measurements. In the ocean, the water gets cooler as it gets deeper (in relatively shallow depths). When an eddy rolls through a sensor array, it is rotating fluid in a circular fashion. This takes water and flips it, displacing colder water on top of warmer water. This creates an instability and leads to mixing. It is hypothesized that the strength of the turbulence is related to how far the cold water gets flipped over, and the amount of stratification, which is a barrier to turbulence. </p>
+
+        <!-- FIRST IMAGE (Left as original) -->
+        <div class="image-block" style="margin-bottom: 2em;">
+            <a href="images/diss1.jpg" class="image fit thumb">
+                <img src="images/diss1.jpg" alt="Turbulent Dissipation" />
+            </a>
+            <p style="color: #333; margin-top: 0.8em;">
+                <strong style="color: #333">Cold water (dark colors) displaced vertically by an eddy, mixing over time, and returning to same background temperature. </strong>
+            </p>
+        </div>
+
+        <p style="color: #333;">We deployed two Acoustic Doppler Current Profilers (ADCPs) which use Doppler shifts from acoustic pings measure flow velocity. The ADCPs measure velocity at several distances away from their deployed position, we set them up to measure vertically upward from the bottom of the ocean. One ADCP (Nortek AquaDopp) was focused on high resolution data in the bottom 2 meters of the water column, and the other (Nortek Sentinel V) measured lower resolution data in the entire water column. This gives us velocity data we need to make spectra and structure functions, and see how turbulence varies in both time and depth.</p>
+
+        <!-- SECOND IMAGE (Made smaller) -->
+        <div class="image-block" style="margin: 0 auto 2em auto; max-width: 50%;">
+            <a href="images/adcp.jpg" class="image fit thumb">
+                <img src="images/adcp.jpg" alt="Acoustic Doppler Current Profiler Schematic" />
+            </a>
+            <p style="color: #333; margin-top: 0.8em; text-align: center;">
+                <strong style="color: #333">Acoustic Doppler Current Profiler Schematic. </strong><a href="https://www.nortekgroup.com/knowledge-center/wiki/guide-to-understanding-adcps" target="_blank">Source</a>
+            </p>
+        </div>
+
+        <p style="color: #333;">We also deployed a string of temperature sensors that were attached to the seafloor and held up by floats. These sensors measured temperature over the bottom 12 meters of the water column (in 90 meters depth). This gives us the data we need to do the Thorpe scale and temperature spectra analysis, also as a function of depth and time.</p>
+        <p style="color: #333;">The instruments were deployed for eight days at the bottom of the canyon in April 2025.</p>
+
+        <!-- BOTTOM IMAGE (Uncropped with no gray box padding) -->
+        <div class="image-block" style="margin: 0 auto 2em auto; max-width: 500px;">
+            <a href="images/LJ_canyon_bathy.jpeg" class="image fit thumb">
+                <img src="images/LJ_canyon_bathy.jpeg" alt="LJ Canyon Bathymetry" style="width: 100%; height: auto; object-fit: fill;" />
+            </a>
+            <p style="color: #333; margin-top: 0.8em;">
+                <strong style="color: #333">LJ Canyon Bathymetry, green is the temperature sensor location, and purple is the dual ADCP location.</strong>
+            </p>
+        </div>
+
+    </div>
+</section>
+
+				<section id="five">
+					<h2 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">Data Timeseries Summary</h2>
+					<div class="inner">
+						<div class="image-block" style="margin-bottom: 2em;">
+							<a href="images/senv_aqdp_velo.jpeg" class="image fit thumb">
+								<img src="images/senv_aqdp_velo.jpeg" alt="Velocity Timeseries" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">Velocity timeseries from the two ADCPs. The top subplot shows the full water column data, the bottom is the bottom ~2 meters. Both velocities have been rotated into along-canyon orientation using principal component analysis. This orientation is important because it will be the direction that generates the most turbulence, and is not aligned with the four cardinal directions. </strong></p>
+						</div>
+
+						<div class="image-block" style="margin-bottom: 2em;">
+							<a href="images/senv_aqdp_velo_zoomed.jpeg" class="image fit thumb">
+								<img src="images/senv_aqdp_velo_zoomed.jpeg" alt="Velocity Timeseries" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">The previous plot zoomed in on ~16 hours of data. Note the strong shear and grainy data near the top of the full water column as acoustic backscatter worsens.</strong></p>
+						</div>
+
+						<div class="image-block" style="margin-bottom: 2em;">
+							<a href="images/therm_TS.jpeg" class="image fit thumb">
+								<img src="images/therm_TS.jpeg" alt="Temperature Timeseries" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">Top: Temperature timeseries from the sensor string. Bottom: Depth-averaged temperature signal, where sudden temperature drops represent cold bores rolling through the sensor array.</strong></p>
+						</div>
+
+						<div class="image-block" style="margin-bottom: 2em;">
+							<a href="images/therm_TS_zommed.jpeg" class="image fit thumb">
+								<img src="images/therm_TS_zommed.jpeg" alt="Temperature Timeseries" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">Previous plot zoomed in on a few cold bore events.</strong></p>
+						</div>
+
+						<div class="image-block" style="margin-bottom: 2em;">
+							<a href="images/others.jpeg" class="image fit thumb">
+								<img src="images/others.jpeg" alt="Pressure and Cross-Canyon Velocity" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">Other important timeseries: Pressure taken from the AquaDopp ADCP, note how the signal is diurnal at the beginning of the timeseries, and semidiurnal in the second half. The middle and bottom subplots show the off-axis velocity component, it is considerably weaker than the on-axis component.</strong></p>
+						</div>
 
 
-					How to visualize turbulence?
+						
+
+					</div>
+
+					<section id="six">
+						<h2 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">Visualizing Turbulent Dissipation</h2>
+							<div class="inner">
+								<p style="color: #333;">Quality control is applied to the raw data shown in the previous section. Details are a little extensive for the overview here, but they involve removing velocity spikes, data with bad correlation, adjsuting artificial sensor biases, and more. After that, turbulent dissipation is found in the four ways described previously. First we will look at velocity spectra. </p>
+
+								<div class="image-block" style="margin-bottom: 2em;">
+									<a href="images/aqdp_summary_spectra.jpeg" class="image fit thumb">
+										<img src="images/aqdp_summary_spectra.jpeg" alt="Velocity Spectra" />
+									</a>
+									<p style="color: #333; margin-top: 0.8em;">
+										<strong style="color: #333">One-day velocity spectra from the AquaDopp ADCP. Left: north velocity, Middle: east velocity, Right: vertical velocity. The east and north velocity spectra have peaks within the surface wave band (5-30 second periods) which interferes with turbulence measurements. This also ruins the along-canyon velocity spectrum. The vertical velocity is not contaminated with waves and can be used to find turbulent dissipation. Notable diurnal and semidiurnal tidal frequencies are also plotted.</strong></p>
+								</div>
+
+								<p style="color: #333;">The above spectra highlight how surface wave motion can block turbulence from being measured. For the vertical velocity, which can be used, we will only look at 20 minute long spectra and to see how strong the turbulent dissipation is.</p>
+							
+								<div class="image-block" style="margin-bottom: 2em; max-width: 75%; margin-left: auto; margin-right: auto;">
+									<a href="images/velo_spec.jpeg" class="image fit thumb">
+										<img src="images/velo_spec.jpeg" alt="Velocity Spectra" />
+									</a>
+									<p style="color: #333; margin-top: 0.8em;">
+										<strong style="color: #333">One example of a 20 minute vertical velocity spectrum. Turbulence theory (Kolmogorov's Hypothesis) states that the energy cascade should follow a -5/3 slope (in loglog space) for turbulence to be present. The strength of the turbulence depends on the PSD value where the slope matches -5/3. We can see the region >10 m^-1 is close to -5/3.
+								</div>
+							
+							<p style="color: #333;">Structure functions are similar to velocity spectra in that they also should scale with a power law for turbulence to be present. The structure function fixes one velocity and then compares the rest of the velocities vertically away from the fixed point. The squared velocity difference should scale with a 2/3 power law. </p>
+								<div class="image-block" style="margin-bottom: 2em; max-width: 75%; margin-left: auto; margin-right: auto;">
+									<a href="images/SF_20.jpeg" class="image fit thumb">
+										<img src="images/SF_20.jpeg" alt="Structure Functions" />
+									</a>
+									<p style="color: #333; margin-top: 0.8em;">
+										<strong style="color: #333">An example of one 20-minute structure function. Each curve has a different reference point in the bottom half of the AquaDopp profile. The coordinate r represents moving away from the reference point, and as that happens the squared velocity difference (D) should scale with a 2/3 power law. The strength of turbulent dissipation scales with how high D is.</strong>
+								</div>
+
+								<div class="image-block" style="margin-bottom: 2em; max-width: 75%; margin-left: auto; margin-right: auto;">
+									<a href="images/SF_TA.jpeg" class="image fit thumb">
+										<img src="images/SF_TA.jpeg" alt="Structure Functions" />
+									</a>
+									<p style="color: #333; margin-top: 0.8em;">
+										<strong style="color: #333">Average 20min. structure function for the entire timeseries, most of the variations have been averaged out. The portion that follows 2/3 power law is near the center of the r range.</strong>
+								</div>
+								
+							
+							
+							</div>
+						</section>
+
+					
 
 
-					How to measure tubulence?
+					
 
 					
 	
