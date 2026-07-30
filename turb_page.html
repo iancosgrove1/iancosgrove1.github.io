@@ -33,8 +33,8 @@
 				<section id="one">
 					<div class="inner">
 						<h1 style="text-align: center; font-weight: bold; font-size: 32px; color: #333;">Environmental Fluid Dynamics: Turbulence</h1>
-					<a href="images/breaking_bore - Copy.jpg" class="image fit thumb">
-					<img src="images/breaking_bore - Copy.jpg" alt="Environmental Fluid Dynamics" /></img></a>
+					<a href="images/breaking.jpeg" class="image fit thumb">
+					<img src="images/breaking.jpeg" alt="Environmental Fluid Dynamics" /></img></a>
 					
 
 					<h2 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">Objective</h2>
@@ -206,6 +206,8 @@
 							<div class="inner">
 								<p style="color: #333;">Quality control is applied to the raw data shown in the previous section. Details are a little extensive for the overview here, but they involve removing velocity spikes, data with bad correlation, adjsuting artificial sensor biases, and more. After that, turbulent dissipation is found in the four ways described previously. First we will look at velocity spectra. </p>
 
+								<h3 style="text-align: center; font-weight: bold; font-size: 20px; color: #333;">Velocity Spectra</h3>
+
 								<div class="image-block" style="margin-bottom: 2em;">
 									<a href="images/aqdp_summary_spectra.jpeg" class="image fit thumb">
 										<img src="images/aqdp_summary_spectra.jpeg" alt="Velocity Spectra" />
@@ -224,6 +226,9 @@
 										<strong style="color: #333">One example of a 20 minute vertical velocity spectrum. Turbulence theory (Kolmogorov's Hypothesis) states that the energy cascade should follow a -5/3 slope (in loglog space) for turbulence to be present. The strength of the turbulence depends on the PSD value where the slope matches -5/3. We can see the region >10 m^-1 is close to -5/3.
 								</div>
 							
+								<h3 style="text-align: center; font-weight: bold; font-size: 20px; color: #333;">Structure Functions</h3>
+
+
 							<p style="color: #333;">Structure functions are similar to velocity spectra in that they also should scale with a power law for turbulence to be present. The structure function fixes one velocity and then compares the rest of the velocities vertically away from the fixed point. The squared velocity difference should scale with a 2/3 power law. </p>
 								<div class="image-block" style="margin-bottom: 2em; max-width: 75%; margin-left: auto; margin-right: auto;">
 									<a href="images/SF_20.jpeg" class="image fit thumb">
@@ -240,7 +245,16 @@
 									<p style="color: #333; margin-top: 0.8em;">
 										<strong style="color: #333">Average 20min. structure function for the entire timeseries, most of the variations have been averaged out. The portion that follows 2/3 power law is near the center of the r range.</strong>
 								</div>
-								
+
+								<h3 style="text-align: center; font-weight: bold; font-size: 20px; color: #333;">Thorpe Scale</h3>
+								<p style="color: #333;">The Thorpe scale measures the strength of turbulence by tracking how far water is displaced vertically during a turbulent event. These overturns are easily viewable in the raw temperature signal. The strengthe of turbulence depends on both the size of the overturn and the level of stratification across the overturns vertical range. Stratification is a measure of the vertical density gradient in the ocean. If there is a large gradient, the stratification is high, and vice versa. Stratification is a barrier to turbulence, so a smaller overturn in a highly stratified environment could be equivalent to a large overturn in a less stratified environment.</p>
+								<div class="image-block" style="margin-bottom: 2em; max-width: 75%; margin-left: auto; margin-right: auto;">
+									<a href="images/oturn.jpeg" class="image fit thumb">
+										<img src="images/oturn.jpeg" alt="Temperature Overturns" />
+									</a>
+									<p style="color: #333; margin-top: 0.8em;">
+										<strong style="color: #333">An example of a single temperature profile. The red line is the raw signal and the blue is the sorted signal. Areas where the red and blue line deviate are overturns. There are multiple overturns in the profile, distinguishable by locating where the red line crosses the blue from left to right. Multiple overturns in the profile also yields vertical resolution for turbulent dissipation.</strong>
+								</div>
 							
 							
 							</div>
