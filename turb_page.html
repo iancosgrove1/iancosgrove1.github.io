@@ -196,10 +196,8 @@
 								<strong style="color: #333">Other important timeseries: Pressure taken from the AquaDopp ADCP, note how the signal is diurnal at the beginning of the timeseries, and semidiurnal in the second half. The middle and bottom subplots show the off-axis velocity component, it is considerably weaker than the on-axis component.</strong></p>
 						</div>
 
-
-						
-
 					</div>
+				</section>
 
 					<section id="six">
 						<h2 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">Visualizing Turbulent Dissipation</h2>
@@ -255,12 +253,116 @@
 									<p style="color: #333; margin-top: 0.8em;">
 										<strong style="color: #333">An example of a single temperature profile. The red line is the raw signal and the blue is the sorted signal. Areas where the red and blue line deviate are overturns. There are multiple overturns in the profile, distinguishable by locating where the red line crosses the blue from left to right. Multiple overturns in the profile also yields vertical resolution for turbulent dissipation.</strong>
 								</div>
+
+								<div class="image-block" style="margin-bottom: 2em; max-width: 75%; margin-left: auto; margin-right: auto;">
+									<a href="images/ot1.jpeg" class="image fit thumb">
+										<img src="images/ot1.jpeg" alt="Temperature Overturns" />
+									</a>
+									<a href="images/ot2.jpeg" class="image fit thumb">
+										<img src="images/ot2.jpeg" alt="Temperature Overturns" />
+									</a>
+									<a href="images/ot3.jpeg" class="image fit thumb">
+										<img src="images/ot3.jpeg" alt="Temperature Overturns" />
+									</a>
+									<a href="images/ot4.jpeg" class="image fit thumb">
+										<img src="images/ot4.jpeg" alt="Temperature Overturns" />
+									</a>
+									<a href="images/ot5.jpeg" class="image fit thumb">
+										<img src="images/ot5.jpeg" alt="Temperature Overturns" />
+									</a>
+									<a href="images/ot6.jpeg" class="image fit thumb">
+										<img src="images/ot6.jpeg" alt="Temperature Overturns" />
+									</a>
+									<p style="color: #333; margin-top: 0.8em;">
+										<strong style="color: #333">Examples of temperature overturns. Color scales are adjusted to show contrast in differing mean temperature conditions.</strong></p>	
+								</div>
+
+								<h3 style="text-align: center; font-weight: bold; font-size: 20px; color: #333;">Temperature Spectra</h3>
+								<p style="color: #333;">Temperature spectra are similar to velocity spectra in that the spectrum should follow a -5/3 curve for turbulence to be present. However, the spectrum values are also related to another variable, the dissipation of the temperature variance. This variable (often called chi) represents smoothing of temperature differences due to turbulent dissipation, and it requires extra approximations to deal with. The dissipation of the temperature variance is first found using temperature spectra, and then the dissipation ratio is used to relate it to turbulent dissipation.</p>
+							
+								<div class="row gtr-50 gtr-uniform">
+									<!-- Left Image -->
+									<div class="col-6 col-12-xsmall">
+										<a href="images/temp_spec_spec.jpeg" class="image fit thumb">
+											<img src="images/temp_spec_spec.jpeg" alt="..." style="width: 100%; height: 100%; object-fit: cover;" />                </a>
+										<p style="color: #333; margin-top: 0.8em;">
+											<strong style="color: #333">Example of 10 minute temperature spectrum. </strong></p>
+									</div>
+
+									<!-- Right Image -->
+									<div class="col-6 col-12-xsmall">
+										<a href="images/temp_spec_mean.jpeg" class="image fit thumb">
+											<img src="images/temp_spec_mean.jpeg" alt="..." style="width: 100%; height: 100%; object-fit: cover;" />                </a>
+										<p style="color: #333; margin-top: 0.8em;">
+											<strong style="color: #333">The mean temperature spectrum over the entire timeseries. </strong></p>
+									</div>
+								</div>
+
+								<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+									<a href="images/chi_t.jpeg" class="image fit thumb">
+										<img src="images/chi_t.jpeg" alt="Chi and Temperature" />
+									</a>
+									<p style="color: #333; margin-top: 0.8em;">
+										<strong style="color: #333">The dissipation of temperature variance (chi) and the temperature over a a few cold bores. Chi increases during the onset of the bores as turbulence rolls through the sensor array. Chi has gaps near the bottom due to data quality control.</strong></p>
+								</div>
+							
+							</div>
+						</section>
+
+
+
+						<section id="seven">
+							<h2 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">Turbulent Dissipation Events</h2>
+							<div class="inner">
+								<p style="color: #333;">Using the previous four methods turbulent dissipation is calculated and compared. We also will look for patterns or features of the turbulence that can be viewed graphically.
+							
+								<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+									<a href="images/eps_comp.jpeg" class="image fit thumb">
+										<img src="images/eps_comp.jpeg" alt="Turbulent Dissipation" />
+									</a>
+									<p style="color: #333; margin-top: 0.8em;">
+										<strong style="color: #333">The results of turbulent dissipation for a cold bore event. The temperature based dissipation methods, Thorpe scale and temperature variance, show clear vertical resolution in the bottom 12 meters. The main event spans the full vertical range, but smaller less energetic evens are suspended at different vertical locations. In fact, there is a signficant amount of lingering turbulence after the main event, the ocean is nearly constantly in a state of overturning. The ADCP-based dissipation methods, velocity spectra and structure functions, only cover the bottom 2 meters, so they are more like point measurements. The bottom plot shows 1:1 comparisons of the four methods. All methods are depth-averaged, and the temperature-based methods are time-averaged to match the 20 minute clock of the ADCP methods. All four methods agree during the main event, but begin to differ elsewhere. 
+								</div>
+							
+								<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+									<a href="images/eps_comp1.jpeg" class="image fit thumb">
+										<img src="images/eps_comp1.jpeg" alt="Turbulent Dissipation" />
+									</a>
+									<p style="color: #333; margin-top: 0.8em;">
+										<strong style="color: #333">Another example of a turbulent event. The Thorpe scale tends to underestimate turbulent dissipation outside of main events.</strong></p>
+								</div>
+
+								<p>It is also helpful to compare turbulent dissipation events to other variables, such as velocity and temperature. The following plots show Thorpe scale dissipation compared to other variables. The Thorpe scale was chosen due to it's high time and vertical resolution. </p>
+							 
+								<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+									<a href="images/thorpe_panel.jpeg" class="image fit thumb">
+										<img src="images/thorpe_panel.jpeg" alt="Dissipation with other Variables" />
+									</a>
+									<p style="color: #333; margin-top: 0.8em;">
+										<strong style="color: #333">This plot shows Thorpe scale dissipation, stratification, temperature, along-canyon velocity, and acoustic backscatter amplitude over a cold bore event. The stratification shows strong barriers that prevent turbulence from mixing. Anytime the stratification is blue, that means there is an instability in density and mixing will occur. The along-canyon velocity shows that this bore is being pushed up-canyon from deeper, colder waters. There is also rapid changes in velocity direction (relative to how fast velocity changes at other locations at the bottom of the ocean) leading to temperature increases as warm water is pushed back down-canyon. The acoustic backscatter amplitude shows a lot of physical mass present in the cold bore.
+								</div>
+
+								<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+									<a href="images/thorpe_panel1.jpeg" class="image fit thumb">
+										<img src="images/thorpe_panel1.jpeg" alt="Dissipation with other Variables" />
+									</a>
+									<p style="color: #333; margin-top: 0.8em;">
+										<strong style="color: #333">Another example of a turbulent event with accompanying variables. In this figure in particular, lines of stratification can be seen holding turbulence between them. Rapid velocity changes lead to mixing. Another note: the velocity and temperature measurements are not at the same location, in fact they are about 35 meters apart, so one instrument will always lead another depending on flow direction.</strong></p>
+								</div>
+							
+							
 							
 							
 							</div>
 						</section>
 
-					
+						<section>
+							<div class="inner">
+								<h2 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">Summary</h2>
+								<p style="color: #333;">Here I have shown some of the key ideas, methods, findings, and visualizations of my research on turbulent dissipation at the bottom of the La Jolla submarine canyon. It is a chaotic and complicated but incredibly interesting environment. What is shown here is not the full story for the work I have done on this project, so if you are interested in seeing other aspects/visualizations of oceanographic data processing, see the section Oceanographic Data Visualizations. Thank you for reading!</p>
+						
+						</section>
+
 
 
 					
