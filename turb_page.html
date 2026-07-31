@@ -10,6 +10,25 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Force image thumbnails and wrappers to have a white background */
+			.image.thumb,
+			.image.fit,
+			.image-block {
+				background-color: #ffffff !important;
+			}
+
+			/* Remove gray overlays or default borders/shadows applied by Strata CSS */
+			.image.thumb:before,
+			.image.thumb:after {
+				background-color: rgba(255, 255, 255, 0) !important;
+				opacity: 0 !important;
+			}
+
+			.image img {
+				background-color: #ffffff !important;
+			}
+</style>
 	</head>
 	<body class="is-preload">
 
@@ -117,8 +136,8 @@
 
         <!-- FIRST IMAGE (Left as original) -->
         <div class="image-block" style="margin-bottom: 2em;">
-            <a href="images/diss1.jpg" class="image fit thumb">
-                <img src="images/diss1.jpg" alt="Turbulent Dissipation" />
+            <a href="images/ot1.jpeg" class="image fit thumb">
+                <img src="images/ot1.jpeg" alt="Turbulent Dissipation" />
             </a>
             <p style="color: #333; margin-top: 0.8em;">
                 <strong style="color: #333">Cold water (dark colors) displaced vertically by an eddy, mixing over time, and returning to same background temperature. </strong>
