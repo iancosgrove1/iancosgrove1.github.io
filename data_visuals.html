@@ -58,17 +58,164 @@
 					<div class="inner">
 						<h2 style="font-weight: bold; font-size: 24px; color: #333; text-align: center;">Table of Contents</h2>
 						<ul style="list-style-type: none; padding-left: 0;">
-							<h2 style="font-weight: bold; font-size: 20px; color: #333;">Environmental Fluid Dynamics: Turbulence</h2>
-							<li style="margin-bottom: 0.5em;"><a href="#one" style="color: #0066cc; text-decoration: underline;">ADCP Summary: Pressure, Velocity, Temperature</a></li>
 
-							<li style="margin-bottom: 0.5em;"><a href="#three" style="color: #0066cc; text-decoration: underline; font-weight: bold;">2. What is Turbulence?</a></li>
-							<li style="margin-bottom: 0.5em;"><a href="#two" style="color: #333; text-decoration: none; font-weight: bold;">3. Location</a></li>
-							<li style="margin-bottom: 0.5em;"><a href="#four" style="color: #333; text-decoration: none; font-weight: bold;">4. Measuring Turbulence</a></li>
-							<li style="margin-bottom: 0.5em;"><a href="#five" style="color: #333; text-decoration: none; font-weight: bold;">5. Data Timeseries Summary</a></li>
-							<li style="margin-bottom: 0.5em;"><a href="#six" style="color: #333; text-decoration: none; font-weight: bold;">6. Visualizing Turbulent Dissipation</a></li>
+							<h2 style="font-weight: bold; font-size: 20px; color: #333; margin-bottom: 0.2em;">Environmental Fluid Dynamics</h2>
+							<li style="margin-bottom: 0.5em;"><a href="#one" style="color: #0066cc; text-decoration: underline;">ADCP Summary: Pressure, Velocity, Temperature</a></li>
+							<li style="margin-bottom: 0.5em;"><a href="#two" style="color: #0066cc; text-decoration: underline;">Temperature Sensor Chain Summary: Temperature & Stratification</a></li>
+							<li style="margin-bottom: 0.5em;"><a href="#three" style="color: #0066cc; text-decoration: underline;">Velocity Spectra</a></li>
+							<li style="margin-bottom: 0.5em;"><a href="#four" style="color: #0066cc; text-decoration: underline;">Pressure & Temperature Spectra</a></li>
+							<li style="margin-bottom: 0.5em;"><a href="#five" style="color: #0066cc; text-decoration: underline;">Turbulent Temperature Overturns</a></li>
+							<li style="margin-bottom: 0.5em;"><a href="#six" style="color: #0066cc; text-decoration: underline;">Velocity & Temperature Relationships during Bore Events</a></li>
+							<li style="margin-bottom: 0.5em;"><a href="#seven" style="color: #0066cc; text-decoration: underline;">Turbulent Dissipation Events</a></li>
+							<li style="margin-bottom: 0.5em;"><a href="#eight" style="color: #0066cc; text-decoration: underline;">Turbulent Dissipation Method Comparison</a></li>
+							<li style="margin-bottom: 0.5em;"><a href="#nine" style="color: #0066cc; text-decoration: underline;">Deployed Instrument Localization</a></li>
+						
+						
 						</ul>
 					</div>
 				</section>
+
+
+				<section id="one" class="wrapper style1">
+					<h2 style="font-weight: bold; font-size: 24px; color: #333; text-align: center;">ADCP Summary: Pressure, Velocity, Temperature</h2>
+						<div class="image-block" style="margin-bottom: 2em;">
+							<a href="images/aqdp_summary.jpeg" class="image fit thumb">
+								<img src="images/aqdp_summary.jpeg" alt="Velocity Timeseries" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">Pressure, temperature, and directional velocity components from an Acoustic Doppler Current Profiler (ADCP). The ADCP, a Nortek Aquadopp, wqas deployed for 8 days at the bottom of a submarine canyon in La Jolla, CA. It was moored to lander and meaured velocity in the bottom 2 meters of the water column in 90 meters of depth.</strong>
+						</div>
+						<div class="image-block" style="margin-bottom: 2em;">
+							<a href="images/senv_summary.jpeg" class="image fit thumb">
+								<img src="images/senv_summary.jpeg" alt="Velocity Timeseries" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">Pressure, temperature, and directional velocity components from a different ADCP, an RDI SentinelV. This ADCP was deployed at the same mission as the Aquadopp but measured nearly the whole water column.</strong>
+						</div>
+				</section>
+				
+				<section id="two" class="wrapper style1">
+					<h2 style="font-weight: bold; font-size: 24px; color: #333; text-align: center;">Temperature Sensor Chain Summary: Temperature & Stratification</h2>
+						<div class="image-block" style="margin-bottom: 2em;">
+							<a href="images/tchain_summary.jpeg" class="image fit thumb">
+								<img src="images/tchain_summary.jpeg" alt="Velocity Timeseries" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">Temperature, stratification, and depth-averaged temperature signals from a deployment in La Jolla CA. Twenty Seabird 56 temperature sensors, or thermistors, were attached on a line to measure vertical changes in temperature over time. The string measured the bottom 12 meters of a submarine canyon in 90 meters depth for 8 days. Using a co-deployed CTD for salinity data, and an equation of state, the stratification is also found. The bottommost plot is the depth-averaged temperature signal.</strong>
+						</div>
+						<div class="image-block" style="margin-bottom: 2em;">
+							<a href="images/tchain_summary_zoomed.jpeg" class="image fit thumb">
+								<img src="images/tchain_summary_zoomed.jpeg" alt="Velocity Timeseries" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">Temperature, stratification, and depth-averaged temperature signals over a cold bore event.</strong>
+						</div>
+				</section>	
+
+				<section id="three" class="wrapper style1">
+					<h2 style="font-weight: bold; font-size: 24px; color: #333; text-align: center;">Velocity Spectra</h2>
+						<div class="image-block" style="margin-bottom: 2em;">
+							<a href="images/aqdp_summary_spectra.jpeg" class="image fit thumb">
+								<img src="images/aqdp_summary_spectra.jpeg" alt="Velocity Timeseries" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">Velocity spectra from the ADCP deployments, A one-day time window is used with 50% overlap to realize tidal frequencies. Tidal frequencies are apparent, as well as the surface wave band (3-30 second period waves)</strong>
+						</div>
+				</section>	
+
+				<section id="four" class="wrapper style1">
+					<h2 style="font-weight: bold; font-size: 24px; color: #333; text-align: center;">Pressure & Temperature Spectra</h2>
+						<div class="image-block" style="margin-bottom: 2em;">
+							<a href="images/pressure_temp_spectra.jpeg" class="image fit thumb">
+								<img src="images/pressure_temp_spectra.jpeg" alt="Pressure & Temperature Spectra" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">Spectra of pressure and temperature from an ADCP. In the pressure spectrum, diurnal, semidiurnal, internal wave, infragravity wave, and surface gravity wave energy is all visible.</strong>
+							</p>
+						</div>
+				</section>	
+
+				<section id="five" class="wrapper style1">
+					<h2 style="font-weight: bold; font-size: 24px; color: #333; text-align: center;">Turbulent Temperature Overturns</h2>
+						<div class="image-block" style="margin-bottom: 2em; max-width: 75%; margin-left: auto; margin-right: auto;">
+							<a href="images/ot1.jpeg" class="image fit thumb">
+								<img src="images/ot1.jpeg" alt="Temperature Overturns" />
+							</a>
+							<a href="images/ot2.jpeg" class="image fit thumb">
+								<img src="images/ot2.jpeg" alt="Temperature Overturns" />
+							</a>
+							<a href="images/ot3.jpeg" class="image fit thumb">
+								<img src="images/ot3.jpeg" alt="Temperature Overturns" />
+							</a>
+							<a href="images/ot4.jpeg" class="image fit thumb">
+								<img src="images/ot4.jpeg" alt="Temperature Overturns" />
+							</a>
+							<a href="images/ot5.jpeg" class="image fit thumb">
+								<img src="images/ot5.jpeg" alt="Temperature Overturns" />
+							</a>
+							<a href="images/ot6.jpeg" class="image fit thumb">
+								<img src="images/ot6.jpeg" alt="Temperature Overturns" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">Examples of temperature overturns. These occur when turbulent eddies roll through a region and invert the temperature profile. They can appear to be breaking waves in some conditions, despite occuring at the bottom of the ocean. Color scales are adjusted to show contrast in differing mean temperature conditions.</strong></p>	
+						</div>
+				</section>
+				
+				<section id="six" class="wrapper style1">
+					<h2 style="font-weight: bold; font-size: 24px; color: #333; text-align: center;">Velocity & Temperature Relationships during Bore Events</h2>
+						<div class="image-block" style="margin-bottom: 2em;">
+							<a href="images/temp_coords.jpeg" class="image fit thumb">
+								<img src="images/temp_coords.jpeg" alt="Velocity & Temperature Relationships" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">It can be helpful to remap velocity from vertical coordinate to a temperature coordinate. This plot shows a submarine canyon oriented perpendicular to a coastline. As water flows up-canyon (towards shore, red color), it brings cold water with it, lowering the temperature at the sensor location. On the flip side, when water flows down-canyon, it brings warm water from the shore with it, raising the temperature. The bottom subplot shows the dissipation of temperature variance, which is a measure of how rapidly temperature changes are being smoothed out. These typically happen closer to rapid temperature changes and changes in velocity.</strong>
+							</p>
+						</div>
+				</section>	
+
+				<section id="seven" class="wrapper style1">
+					<h2 style="font-weight: bold; font-size: 24px; color: #333; text-align: center;">Turbulent Dissipation Events</h2>
+						<div class="image-block" style="margin-bottom: 2em;">
+							<a href="images/thorpe_panel.jpeg" class="image fit thumb">
+								<img src="images/thorpe_panel.jpeg" alt="Turbulent Dissipation Events" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">This figure shows how a turbulent event affects other oceanographic varaibles. The top subplot shows how strong the ocean is being mixed, due to the onset of a cold bore event. The second subplot shwos the stratification, which is a barrier to turbulence. The third shows the temperature, which clearly shows a drop when the bore rolls through. The fourth shows the along-canyon velocity, showing the bore being pushed towards shore from deeper waters. The final subplot shows the acoustic backscatter amplitude, showing lots of mass being carried by the cold bore.</strong>
+							</p>
+						</div>
+				</section>
+
+				<section id="eight" class="wrapper style1">
+					<h2 style="font-weight: bold; font-size: 24px; color: #333; text-align: center;">Turbulent Dissipation Method Comparison</h2>
+						<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<a href="images/eps_comp.jpeg" class="image fit thumb">
+								<img src="images/eps_comp.jpeg" alt="Turbulent Dissipation" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">The results of turbulent dissipation for a cold bore event. Four different methods, using a combiantion of velocity and temperature data measure the strength of turbulence. During the cold bore, the four methods agree, in other areas they don't. This is likely due to the sensors being in slightly seperate locations, difference in vertical and temporal resolution, and differences in data quality control.
+						</div>
+				</section>	
+
+				<section id="nine" class="wrapper style1">
+					<h2 style="font-weight: bold; font-size: 24px; color: #333; text-align: center;">Deployed Instrument Localization</h2>
+						<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<a href="images/localization.jpeg" class="image fit thumb">
+								<img src="images/localization.jpeg" alt="Turbulent Dissipation" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">After instruments are deployed into the ocean, their exact location is unknown. To approximately locate them, the ship will ping the instrument and receieve a response. The time difference between sending the ping and receving the response gives a sphere of potential locations. Obviously many of these positions are not possible (like being out of the water), so it can eb reduced to roughly a circle of positions on the seafloor. Using multiple pings, alongside a known ship position, will give the approximate location. 
+						</div>
+						<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<a href="images/bathy_pos.jpeg" class="image fit thumb">
+								<img src="images/bathy_pos.jpeg" alt="Turbulent Dissipation" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">Chosen approximate locations of the two moored sensor arrays.
+						</div>
+				</section>
+				
+				
+					
 								
 				
 				
