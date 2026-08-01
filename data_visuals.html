@@ -69,6 +69,15 @@
 							<li style="margin-bottom: 0.5em;"><a href="#seven" style="color: #0066cc; text-decoration: underline;">Turbulent Dissipation Events</a></li>
 							<li style="margin-bottom: 0.5em;"><a href="#eight" style="color: #0066cc; text-decoration: underline;">Turbulent Dissipation Method Comparison</a></li>
 							<li style="margin-bottom: 0.5em;"><a href="#nine" style="color: #0066cc; text-decoration: underline;">Deployed Instrument Localization</a></li>
+							<li style="margin-bottom: 0.5em;"><a href="#ten" style="color: #0066cc; text-decoration: underline;">Pressure Spectrogram</a></li>
+							<li style="margin-bottom: 0.5em;"><a href="#eleven" style="color: #0066cc; text-decoration: underline;">Coherence & Phase</a></li>
+							<li style="margin-bottom: 0.5em;"><a href="#twelve" style="color: #0066cc; text-decoration: underline;">Pressure Scalogram</a></li>
+							<li style="margin-bottom: 0.5em;"><a href="#thirteen" style="color: #0066cc; text-decoration: underline;">Autonomous Underwater Vehicle Position Map</a></li>
+							<li style="margin-bottom: 0.5em;"><a href="#fourteen" style="color: #0066cc; text-decoration: underline;">CTD: Temperature-Salinity Plot</a></li>
+							<li style="margin-bottom: 0.5em;"><a href="#fifteen" style="color: #0066cc; text-decoration: underline;">Hodograph</a></li>
+							<li style="margin-bottom: 0.5em;"><a href="#sixteen" style="color: #0066cc; text-decoration: underline;">Underwater Canyon Flow Animation</a></li>
+							<li style="margin-bottom: 0.5em;"><a href="#seventeen" style="color: #0066cc; text-decoration: underline;">Phase Averaging</a></li>
+							<li style="margin-bottom: 0.5em;"><a href="#eighteen" style="color: #0066cc; text-decoration: underline;">Low-Pass Filtering</a></li>
 						
 						
 						</ul>
@@ -192,7 +201,8 @@
 								<img src="images/eps_comp.jpeg" alt="Turbulent Dissipation" />
 							</a>
 							<p style="color: #333; margin-top: 0.8em;">
-								<strong style="color: #333">The results of turbulent dissipation for a cold bore event. Four different methods, using a combiantion of velocity and temperature data measure the strength of turbulence. During the cold bore, the four methods agree, in other areas they don't. This is likely due to the sensors being in slightly seperate locations, difference in vertical and temporal resolution, and differences in data quality control.
+								<strong style="color: #333">The results of turbulent dissipation for a cold bore event. Four different methods, using a combiantion of velocity and temperature data measure the strength of turbulence. During the cold bore, the four methods agree, in other areas they don't. This is likely due to the sensors being in slightly seperate locations, difference in vertical and temporal resolution, and differences in data quality control.</strong>
+							</p>
 						</div>
 				</section>	
 
@@ -203,14 +213,134 @@
 								<img src="images/localization.jpeg" alt="Turbulent Dissipation" />
 							</a>
 							<p style="color: #333; margin-top: 0.8em;">
-								<strong style="color: #333">After instruments are deployed into the ocean, their exact location is unknown. To approximately locate them, the ship will ping the instrument and receieve a response. The time difference between sending the ping and receving the response gives a sphere of potential locations. Obviously many of these positions are not possible (like being out of the water), so it can eb reduced to roughly a circle of positions on the seafloor. Using multiple pings, alongside a known ship position, will give the approximate location. 
+								<strong style="color: #333">After instruments are deployed into the ocean, their exact location is unknown. To approximately locate them, the ship will ping the instrument and receieve a response. The time difference between sending the ping and receving the response gives a sphere of potential locations. Obviously many of these positions are not possible (like being out of the water), so it can eb reduced to roughly a circle of positions on the seafloor. Using multiple pings, alongside a known ship position, will give the approximate location.</strong> 
+							</p>
 						</div>
 						<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
 							<a href="images/bathy_pos.jpeg" class="image fit thumb">
 								<img src="images/bathy_pos.jpeg" alt="Turbulent Dissipation" />
 							</a>
 							<p style="color: #333; margin-top: 0.8em;">
-								<strong style="color: #333">Chosen approximate locations of the two moored sensor arrays.
+								<strong style="color: #333">Chosen approximate locations of the two moored sensor arrays.</strong>
+								</p>
+							</div>
+				</section>
+
+				<section id="ten" class="wrapper style1">
+					<h2 style="font-weight: bold; font-size: 24px; color: #333; text-align: center;">Pressure Spectrogram</h2>
+						<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<a href="images/pressure_specgram.jpeg" class="image fit thumb">
+								<img src="images/pressure_specgram.jpeg" alt="Turbulent Dissipation" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">A spectrogram of an ADCP pressure signal. 10 minute windows with 50% overlap are used to resolve surface gravity wave and infragravity wave energy. Surface gravity waves arrive between 0.05-0.1Hz, with shorter frequencies (longer wavelengths) arriving first due to deep/long wave propagation. Multiple swells are present and compound on each other. Infragravity wave energy appears below 0.05Hz and appears to be forced by semidiurnal tides, as it is only significantly present in the second half of the timeseries.</strong>
+							</p>
+						</div>
+				</section>	
+
+				<section id="eleven" class="wrapper style1">
+					<h2 style="font-weight: bold; font-size: 24px; color: #333; text-align: center;">Coherence & Phase</h2>
+						<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<a href="images/coh_phase.jpeg" class="image fit thumb">
+								<img src="images/coh_phase.jpeg" alt="Turbulent Dissipation" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">Coherence and phase relationship between pressure and velocity data in the ocean. The goal here is to analyze the effects of surface waves on velocity data. We can see in the plot that within the surface gravity wave frequency band, there is very strong coherene and an in-phase relationship. This shows that surface waves greatly influence the velocities in one of the cardianl directions, even when the velocity is measured at 90 meters depth.</strong>
+							</p>
+						</div>
+				</section>
+
+				<section id="twelve" class="wrapper style1">
+					<h2 style="font-weight: bold; font-size: 24px; color: #333; text-align: center;">Pressure Scalogram</h2>
+						<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<a href="images/scalogram.jpeg" class="image fit thumb">
+								<img src="images/scalogram.jpeg" alt="Turbulent Dissipation" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">The scalogram is made from the continuous wavelet transform (CWT). The CWT is similar to a spectrogram, but instead of comparing a signal to different frequencies, it compares it to different scaled wavelets. The wavelets vary in frequency and time, which allows for high temporal resolution compared to the spectrogram. In the scalogram, we can see surface gravity and infragravity wave energy similar to the spectrogram. We can see internal wave energy below infragravity waves, and diurnal and semidiurnal tidal frequencies at the bottom. The curves on the bottom left and right are an unphysical artifact of the CWT. </strong>
+							</p>
+						</div>
+				</section>
+
+				<section id="thirteen" class="wrapper style1">
+					<h2 style="font-weight: bold; font-size: 24px; color: #333; text-align: center;">Autonomous Underwater Vehicle Position Map</h2>
+						<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<a href="images/auv_cmap.jpeg" class="image fit thumb">
+								<img src="images/auv_cmap.jpeg" alt="Turbulent Dissipation" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">A figure showing the position a Remus 100 underwater autonomous vehicle deployed in a submarine canyon. The color of the points indicates time, where brighter colors are closer to the start of the deployment and darker are closer to the end. T1 and T2 are transponder locations used for the Remus 100 to ping for position. </strong>
+							</p>
+						</div>
+				</section>
+
+				<section id="fourteen" class="wrapper style1">
+					<h2 style="font-weight: bold; font-size: 24px; color: #333; text-align: center;">CTD: Temperature-Salinity Plot</h2>
+						<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<a href="images/TS.jpeg" class="image fit thumb">
+								<img src="images/TS.jpeg" alt="Turbulent Dissipation" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">This figure shows the temperature salinity relationship measured from a conductivity, temperature, and depth sensor placed at the bottom of a submarine canyon in La Jolla, CA. The color indicates time, showing how the relationship varies over the course of an eight-day deployment. This relationship is used to map the two variables together and infer others like density. </strong>
+							</p>
+						</div>
+				</section>
+
+				<section id="fifteen" class="wrapper style1">
+					<h2 style="font-weight: bold; font-size: 24px; color: #333; text-align: center;">Hodograph</h2>
+						<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<a href="images/hodo.jpeg" class="image fit thumb">
+								<img src="images/hodo.jpeg" alt="Turbulent Dissipation" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">The hodograph is a tool to visualize flow direction. It takes two velocity components, north and east, and plots them against each other to look for dominant flow patterns. If we overlay the hodograph over the geometry constraining the flow, it is easier. In this figure, the hodogrpah of velocity data at the bottom of a submarine canyon is shown, and it is apparent that the flow is following the main direction of the canyon (thalweg) and smaller tributary canyons.</strong>
+							</p>
+						</div>
+				</section>
+
+				<section id="sixteen" class="wrapper style1">
+					<h2 style="font-weight: bold; font-size: 24px; color: #333; text-align: center;">Underwater Canyon Flow Animation</h2>
+					<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+						
+						<!-- Embedded MP4 Video -->
+						<video controls autoplay loop muted playsinline style="width: 100%; height: auto; display: block; border-radius: 4px;">
+							<source src="images/LJ_Canyon_Tracking_with_Temp.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+
+						<p style="color: #333; margin-top: 0.8em;">
+							<strong style="color: #333">Flow in an underwater canyon can be hard to visualize, this video aims to provide some clarity. The velocity signal is only provided at one location in this mission, so I can't truly integrate a velocity field and get particle positions. Instead, I simply release a particle at a time, and assume it feels the velocity measured at the sensor location despite not being at that location. Then, I keep the particle alive for a certain amount of time so that there are no unphysical results. Particles are released on regular intervals. The temperature signal in the canyon is also plotted, and it shows particles pushed up-canyon when cold bores roll through (cold temperature spikes). We can also see preferred directions of the flow in specific canyon tributaries.</strong>
+						</p>
+					</div>
+				</section>
+
+				<section id="seventeen" class="wrapper style1">
+					<h2 style="font-weight: bold; font-size: 24px; color: #333; text-align: center;">Phase Averaging</h2>
+						<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<a href="images/phases.jpeg" class="image fit thumb">
+								<img src="images/phases.jpeg" alt="Turbulent Dissipation" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">Applying a fourth-order Butterworth low-pass filter can be used to extract long-term trends from data. In this example, a 12-hour filter was used on two sets of ADCP velocity data. The velocity has been rotated into it's on and off-axis components, to show the primary direction. There are some patterns visible in velocity, as it alternates from up to down canyon.</strong>
+							</p>
+							<a href="images/phase_avg.jpeg" class="image fit thumb">
+								<img src="images/phase_avg.jpeg" alt="Turbulent Dissipation" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">Performing a vertical average of the phase stack from above yields the actual phae average. In this case, there are no strong patterns in the semidiurnal signal, so the phase average is messy.</strong>
+							</p>
+						</div>
+				</section>
+
+				<section id="eighteen" class="wrapper style1">
+					<h2 style="font-weight: bold; font-size: 24px; color: #333; text-align: center;">Low-Pass Filtering</h2>
+						<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<a href="images/LP_filter.jpeg" class="image fit thumb">
+								<img src="images/LP_filter.jpeg" alt="Turbulent Dissipation" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">Phase averaging is a technique used to visually search for patterns that exist over tidal phases. The method involves seperating data into phases, such as the M2 semidiurnal phase, and stacking the chunks on top of each other. Those individual phases are shown here. There aren't many obvious patterns due to flwo complexity, but there is an up-canyon flow seen towards the end of the bottom half of the velocity plots, and some structure in the temperature plot.</strong>
+							</p>
 						</div>
 				</section>
 				
