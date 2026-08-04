@@ -175,23 +175,212 @@
 
 									<p style="color: #333">The detector loops through all 75-second time chunks in the timeseries and logs detected calls. One benefit of this detector is that it can handle differing mean noise conditions due to taking a local noise floor, rather than a fixed one for the whole timeseries. The detector gathers all detections into a list, which then must be analyzed for true positive signals of interest and false positives.</p>
 										
-									<p style="color: #333">I made several updates to the MATLAB code for the GPL detector:</p>
+									<p style="color: #333">The GPL detector was initially used for humpback whales, and it had a set of parameters designed for those calls. My team was interested in low-frequency baleen whales, so my first task was to adjust parameters, run the detector, and evaluate the performance. I iterated the parameter changes until the detector reached a 98% recall rate on detecting 90-30 & 50-30Hz downsweeps (successfully detecting 98% of all manually-flagged calls).</p>
 							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
+									<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+										<a href="images/gpl_9030.jpg" class="image fit thumb">
+											<img src="images/gpl_9030.jpg" alt="GPL Detector Algorithm" />
+										</a>
+										<p style="color: #333; margin-top: 0.8em;">
+											<strong style="color: #333">An example of 90-30 and 50-30 Hz downsweeps being detected by the GPL detector. The main parameters that are tuned to identify the calls are the noise floor and detection threshold.</strong>
+										</p>
+									</div>
+
+									<p style="color: #333">I also was tasked with reviewing and improving the GPL detector MATLAB code. I added documentation, some minor optimizations, and implemented new sections so that the detector is compatible wioth newer audio data.</p>
+									
+									<p style="color: #333">I also implemented new functions to the GPL detector. Most of the functions were extra measurement parameters: when the GPL detector locates a call, it performs simple measurements of the call such as duration and frequency bandwidth. I added more measurements, allowing for more robust identiifcation of similar signals in future work. </p>
+									<p style="color: #333">GPL detector additions:</p>
+									<ul style="color: #333;">
+										<li>Distribution of detections into multiple files.</li>
+										<li>Call frequency counter</li>
+										<li>Reworked parameter setup</li>
+										<li>Added function to remove instrument-made noise (First-in, first-out)</li>
+										<li>Added filtering options for calls where the 2D image is too small to be considered</li>
+										<li>Added measurements of slope, bandwidth, and duration for calls that contain multiple signal types in one detection</li>
+										<li>Added filtering options for multi-call detections</li>
+										<li>Added option to compute the RMS received level of the detection</li>
+										<li>Added option to compute the sound exposure level of the detection</li>
+										<li>Added option to compute peak frequency</li>
+										<li>Added option to compute the peak-to-peak received level</li>
+										<li>Added options for RMS RL, P2P RL, and SEL to use -3 dB, -10 dB, 90% cumulative energy, and 97% cumulative energy methods for computation</li>
+										<li>Compatability with deck test single cuty cycle</li>
+									</ul>
+
 							</div>
 							</section>	
+
+							<section id="six">
+								<h2 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">Manual Detection Reviewer</h2>
+								<div class="inner">
+									<p style="color: #333;">The GPL detector struggled greatly when it came to low-frequency signals in environments with high ambient noise, such as the Arctic. In order to succesfully identify 98% of all manually-flagged signals (~650 over 2 months of data), it had 3 orders of magnitude more false positives (~500,000). This is not reasonable for a human to analyze, in fact it would be quicker to manually annotate a timeseries without even running the detector. I shifted to a new task, manual detection review of signals that have already been flagged by a human reviewer. The lab had other students that had scanned through timeseries data and recorded signals of interest. However, there was no way to go back through these signals and extract identifying parameters like received level. The GPL detector makes these measurements, but it was only able to do batch detections. I developed a program for users to rapidly review manual detections and extract all relevant parameters.</p>
+								
+									<p style="color: #333;">The program was written in MATLAB and it uses hotkeys for review rather than buttons in a GUI. The program loops over each manually flagged detection, runs the GPL detector over a 75-second window containing the detection, then presents the user with the spectrogram displaying the GPL detections and the manually-flagged detection. The user then selects which GPL detection corresponds to the manual detection.I named the program "GPL Fetch".</p>
+
+									<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+										<a href="images/gpl_fetch.jpeg" class="image fit thumb">
+											<img src="images/gpl_fetch.jpeg" alt="GPL Fetch Algorithm" />
+										</a>
+										<p style="color: #333; margin-top: 0.8em;">
+											<strong style="color: #333">An example of a GPL Fetch window. The top spectrogram shows the 75-second window with detections annotated in boxes. The middle subplot shows the energy summation used to identify detections. The bottom subplot shows only the calls located by the GPL detector (red boxes) and the manually flagged detection (green). At this point, the user simply types "4" into the command window to select the corresponding GPL detection, and moves on to the next window.</strong>
+										</p>
+									</div>
+
+									<p style="color: #333;">GPL Fetch will loop over all manually-flagged detections, dispalying the window for review, and saving all relevant parameters for GPL detections that are paired to manual ones. All work is done in the command window, and progress is automatically saved, allowing for pausing and returning later for another session. GPL Fetch is also equipped to handle edge cases, this is called special case mode. If the user comes across an anomaly, they may enter special case mode and record a series of commands.</p>
+
+									<p style="color: #333;">Examples of special cases that GPL Fetch can handle:</p>
+									<ul style="color: #333;">
+										<li>Single detection (regular) entry</li>
+										<li>Single call split into multiple GPL detections</li>
+										<li>GPL detector missed the call</li>
+										<li>Adhoc detections: option to add more calls in the window</li>
+										<li>Switch the manual detection to a new (better) one in the window</li>
+										<li>Mark call as a false entry</li>
+										<li>Reprocess due to GPL detector missing part of the call</li>
+										<li>Reprocess due to call having weak received level</li>
+										<li>Flag a false negative: a call in the window is missed by the GPL detector</li>
+										<li>Mark a separate call as interesting</li>
+										<li>Mark an error that was made while reviewing the current window</li>
+										<li>Skip the window for any reason</li>
+										<li>Mark a call as undetermined (unsure if it truly is a signal of interest)</li>
+										<li>Exit special case mode/continue to the next window</li>
+										<li>End the session</li>
+										<li>Adjust the spectrogram brightness and contrast: colormap scaling</li>
+							
+									</ul>
+
+									<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+										<a href="images/gpl_fetch_ex1.jpeg" class="image fit thumb">
+											<img src="images/gpl_fetch_ex1.jpeg" alt="GPL Fetch Algorithm" />
+										</a>
+										<p style="color: #333; margin-top: 0.8em;">
+											<strong style="color: #333">An example of a GPL Fetch window with special cases. The orginal detection at "4" has been replaced with "multiple detections span current call", and calls 4,5, and 6 are marked. Calls 21 and 25 are added as adhoc detections. All special cases will visually show the user what has been selected.</strong>
+										</p>
+									</div>
+
+									<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+										<a href="images/gpl_fetch_ex2.jpeg" class="image fit thumb">
+											<img src="images/gpl_fetch_ex2.jpeg" alt="GPL Fetch Algorithm" />
+										</a>
+										<p style="color: #333; margin-top: 0.8em;">
+											<strong style="color: #333">Another example of a GPL Fetch window. This time the manual detection has been swapped for another GPL detection in the window, the window has been flagged with having a false negative, and the brightness & contrast have been adjusted. All of these can be adjusted live while reviewing.</strong>
+										</p>
+									</div>
+
+									<p style="color: #333;">After completing the review process, I wrote more code to process the GPL Fetch outputs, giving the user summaries of call parameters. Each type of measurement is reported in a table withe mean, median, standard deviation, and range. Histograms are also available. GPL Fetch was used by another graduate student in the lab to review over 5,000 fin whale detections and multiple other baleen whales in less than a week.</p>
+
+								</div>
+							</section>
+
+							<section id="seven">
+								<h2 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">Hydrophone Mount Testing</h2>
+								<div class="inner">
+									<p style="color: #333;">The Scripps Whale Acoustics Lab has developed their own hydrophones in house for decades. Part of that system is a mooring line, which the hydrophone is attached to, that connects the floats, ballast, and battery systems. </p>
+								
+									<div class="image-block" style="margin-bottom: 2em; max-width: 50%; margin-left: auto; margin-right: auto;">
+										<a href="images/harp.jpg" class="image fit thumb">
+											<img src="images/harp.jpg" alt="Harp Hydrophone" style="width: 100%; height: auto;" />
+										</a>
+										<p style="color: #333; margin-top: 0.8em; text-align: left;">
+											<strong style="color: #333">A schematic of the deployed hydrophone line. The hydrophone itself is attached via vibration isolating rings to the mooring line. The vibration isolation rings are designed to prevent watch circle motions from leaving an acoustic signature in the data. <a href="https://ieeexplore.ieee.org/abstract/document/4231090" target="_blank"> Source</a></strong>
+										</p>
+									</div>
+
+									<p style="color: #333;">In the Arctic, it was found the flow of water was so strong at relatively shallow sites that the vibration isolation rings were not enough to dampen the noise. A new device was designed to keep the hydrophone rigidly mounted without influence of the swaying mooring line. I was tasked with testing this device: the goal was to find unintended sources of noise in the new design.</p>
+									<p style="color: #333;">I designed a series of tests for the testing rig, they involved applying taps and swaying motions to the protorype while live recording audio using the hydrophone. I also used a GoPro to record motion of the hydrophone relative to it's frame. Taps and swaying motions at varying speeds were applied to various parts of the prototype and signatures in the produced spectrograms were analyzed.</p>
+								
+									<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+										<a href="images/hmt1.jpeg" class="image fit thumb">
+											<img src="images/hmt1.jpeg" alt="Hydrophone Mount Testing" />
+										</a>
+										<p style="color: #333; margin-top: 0.8em;">
+											<strong style="color: #333">An example of one of the hydrophone mount tests. Swaying was applied to one portion of the mount for a short period of time. The acoustic signatures are viewable in the bottom subplot. Spikes up to 200 and 500 Hz are visible, while all frequencies below 100Hz are whited out.</strong>
+										</p>
+									</div>
+
+									<p style="color: #333;">As mentioned above, a GoPro was used to track relative motions of the hydrophone. I used Kinovea, a kinematic motion analysis program, to process the relative vertical and horizontal displacements of the hydrophone from it's frame. It was hypothesized that there would be a threshold of displacement above which a specific type of internal noise was generated.</p>
+									<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+										<a href="images/hmt2.jpeg" class="image fit thumb">
+											<img src="images/hmt2.jpeg" alt="Hydrophone Mount Testing" />
+										</a>
+										<p style="color: #333; margin-top: 0.8em;">
+											<strong style="color: #333">An example of kineamtic motion results for one hypdrophone mount test. Two markers were placed in the cameras view and were used to track motion. We can see increased amplitude noise when the vertical displacements are larger, as well as wide frequency bandwidth pulses also at the same time as large displacements.</strong>
+										</p>
+									</div>
+
+									<p style="color: #333;">The results of the tests were used to recommend a few small changes to the hydrophone design, specifically with how the cable tether was attached to the mount. There were several limitations, most notably that accurate oceanic conditions were not fully utilized in the tests. Future tests would need to use a waetr tank with currents applied for a true response.</p>
+								
+									<p style="color: #333;">The prototype was deployed in the field for a short test run. Unintended noise was found in the results when the instrument came back out of the water, namely pulses every second. This contaminated the spectrum and spectrogram with spikes, and blocked any other meaningful signal.</p>
+									<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+										<a href="images/qk1.jpeg" class="image fit thumb">
+											<img src="images/qk1.jpeg" alt="Hydrophone Mount Testing" />
+										</a>
+										<p style="color: #333; margin-top: 0.8em;">
+											<strong style="color: #333">A full test deployment spectrum (left) and zoom in (right) showing pulses at harmonics of 1Hz. </strong>
+										</p>
+									</div>
+
+									<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+										<a href="images/qk2.jpeg" class="image fit thumb">
+											<img src="images/qk2.jpeg" alt="Hydrophone Mount Testing" />
+										</a>
+										<p style="color: #333; margin-top: 0.8em;">
+											<strong style="color: #333">The spectrogram of the same deployment, with 1Hz pulses ruining the image.</strong>
+										</p>
+									</div>
+
+									<p style="color: #333;">I wrote MATLAB code to go through the deployment and search for the pulses, then remove them. This turned out to be a little less simple than hoped, as the pulses actually drifted in time over the course of the deployment.</p>
+									<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+										<a href="images/qk3.jpeg" class="image fit thumb">
+											<img src="images/qk3.jpeg" alt="Hydrophone Mount Testing" />
+										</a>
+										<p style="color: #333; margin-top: 0.8em;">
+											<strong style="color: #333">The bottom subplot here shows at what time in the second that the pulses occured. They were quite short, occcuring near the end of each second. They drifted and jumped to be earlier and earlier in the second over time. </strong>
+										</p>
+									</div>
+
+									<p style="color: #333;">After applying my fix to the 1Hz issue, the spectrum was repaired and the data was usable for other projects.</p>
+								
+									<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+										<a href="images/qk4.jpeg" class="image fit thumb">
+											<img src="images/qk4.jpeg" alt="Hydrophone Mount Testing" />
+										</a>
+										<p style="color: #333; margin-top: 0.8em;">
+											<strong style="color: #333">The process of removing the pulses involved locating them in the second, setting a threshold and identifying where the pulses start and stop. The stopping point was challenging since each pulse had to recover back to the orignal baseline level. After the pulse was removed, the acoustic signal was interpolated through the gap, the safest option since there was no way to know what the true signal was at that time.</strong>
+										</p>
+									</div>
+
+									<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+										<a href="images/qk5.jpeg" class="image fit thumb">
+											<img src="images/qk5.jpeg" alt="Hydrophone Mount Testing" />
+										</a>
+										<p style="color: #333; margin-top: 0.8em;">
+											<strong style="color: #333">This is what the spectrum looked like before (red) and after (blue) the pulses were removed.</strong>
+										</p>
+									</div>
+									
+								
+								
+								
+								</div>
+
+								<section id="eight">
+									<h2 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">Conclusion</h2>
+									<div class="inner">
+										<p style="color: #333;">In conclusion, my work at the Scripps Whale Acoustics Lab has involved multiple different projects in the Arctic team and provided me my first research experience. I worked in signal detection algorithms, signal processing, academic method implementation, data quality control, hydrophone prototypes, and worked with a wonderful group of researchers. I am very grateful for time in the lab and especially to my advisor, Josh, for his guidance and support over nearly three years.</p>
+									</div>
+
+								
+								
+								
+								
+								
+								
+								
+								
+								
+			</div>
+
+								
 				
 				
 				
