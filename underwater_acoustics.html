@@ -68,7 +68,7 @@
 								<img src="images/noaa.jpeg" alt="NOAA" />
 							</a>
 							<p style="color: #333; margin-top: 0.8em;">
-								<strong style="color: #333">Graphic displaying sources of underwater noise.</strong><a href="https://www.fisheries.noaa.gov/national/science-data/ocean-noise" target="_blank">Source</a> </p>
+								<strong style="color: #333">Graphic displaying sources of underwater noise.</strong><a href="https://www.fisheries.noaa.gov/national/science-data/ocean-noise" target="_blank"> Source</a> </p>
 						</div>
 						<p style="color: #333;">The Scripps Whale Acoustics Laboratory focuses primarily on marine mammals, but is also heavily invested in noise created by ships of various types. They, and other labs in the Marine Bioacoustic Research Collaboative have performed studies all over the world: locally in the Southern California Bight, further in the Pacific like Hawaii, the Atlantic ocean, Antarctica, and the Canadian Arctic. The lab developed their own hydrophones in house, they typically record continuously at 200kHz to resolve as many relevant frequencies as posssible.</p>
 						<div class="image-block" style="margin-bottom: 2em;">
@@ -76,7 +76,7 @@
 									<img src="images/bluewhale.jpg" alt="Blue Whale" />
 								</a>
 								<p style="color: #333; margin-top: 0.8em;">
-									<strong style="color: #333">Blue Whale surfacing.</strong><a href="https://www.worldwildlife.org/species/whale/blue-whale/" target="_blank">Source</a> </p>
+									<strong style="color: #333">Blue Whale surfacing.</strong><a href="https://www.worldwildlife.org/species/whale/blue-whale/" target="_blank"> Source</a> </p>
 							</div>
 							<p style="color: #333;">My first project focused on low-frequency acoustics for a project where data was collected in the Canadian Arctic. The goal was to correctly identify and isolate certain baleen whale signals that are generally less than 100Hz. The ocean is very loud at these low frequencies, so the signals are caught up in a plethora of shipping, flow, and geologic noise. </p>
 						</div>
@@ -87,7 +87,7 @@
 						<h2 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">Low-Frequency Signals in the Arctic</h2>
 						<div class="inner">
 							<p style="color: #333;">First, I will outline some examples of signals that are found at low-frequencies in the Arctic. These examples come from summertime months, but during other seasons, particularly when ice sheets cover the ocean, the soundscape is drastically different. I will show spectrograms of acoustic timeseries data, which decompose timeseries data into it's frequency components over a specified chunk of time. Every acoustic signal has a specific pattern in frequency space.</p>
-						</div>
+						
 
 						<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
 							<a href="images/9030_final.jpeg" class="image fit thumb">
@@ -142,6 +142,56 @@
 								<strong style="color: #333">Upsweep and downsweep signals from marine mammals.</strong>
 							</p>
 						</div>
+
+						<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<a href="images/strumming.jpeg" class="image fit thumb">
+								<img src="images/strumming.jpeg" alt="Strumming Signals" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">Strumming signals, which are large high intensity pulses. These are made when the mooring line that the hydrophone is attached to oscillates in high currentsand physically hits the hydrophone.</strong>
+							</p>
+						</div>
+
+						<p style="color: #333;">These figures show that at low frequencies, the ocean is alive with sound, and most of it is not made from animals. In fact, a lot of it, like shipping noise, completely drowns out the noises made by the animals.</p>
+
+						</div>
+						</section>
+
+						<section id="five">
+							<h2 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">Signal Detection Algorithms</h2>
+							<div class="inner">
+								<p style="color: #333;">One challenge with processing acoustic timeseries data is how long the deployments are. Deployments oftentimes are roughly 1 year long, and the signals we are searching for are only a few seconds long. So a human analyst would need to go through a year of data essentially minute-by-minute, which is not practical, especially if there are mutiple deployments. Instead the lab turns to signal detection algorithms to automatically locate signals of interest. </p>
+								<p style="color: #333;">One of the simplest algorithms is the energy detector. This algorithm scans the data in chunks andf searches for spikes in energy, since a biological vocalization would, at its core, be an energy spike at specific frequencies. Energy detectors can look within specific frequency bands and collect data about the spike, which can help narrow down whether or not the detection is a true signal of interest or a false positive. </p>
+							    <p style="color: #333;">The algorithm I used was the Generalized Power Law (GPL) detector developed by Tyler Helble and published in 2012. <a href="https://pubmed.ncbi.nlm.nih.gov/22501048/" target="_blank"> Source. </a>The GPL detector was an energy detector in simplest terms, but the theory behind it is quite complex, and it's performance excelled at detecting humpback whale vocalizations. The idea behind the detector was to isolate data into 75-second chunks, identify a noise floor for the chunk using whitening and a power-law greater than two, and then remove background noise. After the process is finished, the only signals left in the window should be those of interest.
+							
+									<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+										<a href="images/gpl.jpeg" class="image fit thumb">
+											<img src="images/gpl.jpeg" alt="GPL Detector Algorithm" />
+										</a>
+										<p style="color: #333; margin-top: 0.8em;">
+											<strong style="color: #333">The top subplot shows a spectrogram of one 75-second chunk of data. The GPL detector takes that spectrogram, creates a timeseries pertaining to the energy level in each time bin, then applies a threshold. The middle subplot shows the thresholding process. The black line is the noise floor, any values below this are ignored. The green line is the signal detection threshold, any values above this, and down to the noise floor are detections. The bottom subplot shows the spectrogram with only the time regions containing detections are visible.</strong>
+										</p>
+									</div>
+
+									<p style="color: #333">The detector loops through all 75-second time chunks in the timeseries and logs detected calls. One benefit of this detector is that it can handle differing mean noise conditions due to taking a local noise floor, rather than a fixed one for the whole timeseries. The detector gathers all detections into a list, which then must be analyzed for true positive signals of interest and false positives.</p>
+										
+									<p style="color: #333">I made several updates to the MATLAB code for the GPL detector:</p>
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							</div>
+							</section>	
 				
 				
 				
