@@ -1,0 +1,277 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Ian Cosgrove</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Force image thumbnails and wrappers to have a white background */
+			.image.thumb,
+			.image.fit,
+			.image-block {
+				background-color: #ffffff !important;
+			}
+
+			/* Remove gray overlays or default borders/shadows applied by Strata CSS */
+			.image.thumb:before,
+			.image.thumb:after {
+				background-color: rgba(255, 255, 255, 0) !important;
+				opacity: 0 !important;
+			}
+
+			.image img {
+				background-color: #ffffff !important;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="images/ian.jpeg" alt="Ian"></a>
+					<h1><strong>Ian Cosgrove 
+					</strong></a></h1>
+					<strong>
+						M.S. Mechanical Engineering - UC San Diego (2026)<br>
+					B.S. Mechanical Engineering - UC San Diego (2025)
+					</strong>
+					<br>San Diego, CA
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<section id="one">
+					<div class="inner">	
+						<h2 style="text-align: center; font-weight: bold; font-size: 32px; color: #333;">Simulation & Modeling</h2>
+						<p style="color: #333;">During my time as an undergraduate student at UC San Diego, I had the opportunity to take a class on Computational Fluid Dynamics. This course provided me with valuable skills: learning the principles behind discretization, developing a CFD solver in MATLAB, running simulations in Ansys Fluent, and learning how professional CFD solvers work. After complteing the course, I was given the opportunity to further strengthen my skills with Ansys certifications. In this section, I will summarize my projects and certification skills.</p>
+					</div>
+				</section>
+				
+				<section id="one" class="wrapper style1">
+					<h3 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">MATLAB CFD Visualization</h3>
+					<p style="color: #333;">In my Computational Fluid Dynamics class, I used MATLAB to develop a CFD solver and visualize the results. The first section is simple flow field visualizations for flow around a cylinder at Reynolds Number 100.</p>
+					<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+					
+						<!-- Embedded MP4 Video -->
+						<video controls autoplay loop muted playsinline style="width: 100%; height: auto; display: block; border-radius: 4px;">
+							<source src="images/cylinder_velocity.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+
+						<p style="color: #333; margin-top: 0.8em;">
+							<strong style="color: #333">This animation shows the horizontal and vertical components of the velocity field around the cylinder over the course of the simulation. Eddies are formed in the wake of the cylinder, creating a von Karman vortex street.</strong>
+						</p>
+					</div>
+
+					<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<a href="images/cfd_meanflow.jpeg" class="image fit thumb">
+								<img src="images/cfd_meanflow.jpeg" alt="Turbulent Dissipation" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">This figure shows the mean flow field of the horizontal velocity component, where the mean is taken over the entire simulation duration at each grid point. Streamlines are added to show the effects of the cylinder on the fluid and stagnation points.</strong>
+							</p>
+						</div>
+					</div>
+
+					<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+					
+						<!-- Embedded MP4 Video -->
+						<video controls autoplay loop muted playsinline style="width: 100%; height: auto; display: block; border-radius: 4px;">
+							<source src="images/cylinder_fluctuations.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+
+						<p style="color: #333; margin-top: 0.8em;">
+							<strong style="color: #333">This animation shows the horizontal and vertical components of the velocity fluctuations around the cylinder over the course of the simulation. The fluctuations are defined as the velocity field with the mean at each grid point removed.</strong>
+						</p>
+					</div>
+
+					<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<a href="images/cfd_tke.jpeg" class="image fit thumb">
+								<img src="images/cfd_tke.jpeg" alt="Turbulent Kinetic Energy" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">This figure shows the turbulent kinetic energy field around the cylinder over the course of the simulation. Turbulent kinetic energy is a measure of the intensity of turbulence in the flow, and it is found through the velocity fluctuations.</strong>
+							</p>
+						</div>
+					</div>
+				</section>
+
+
+
+				<section id="two" class="wrapper style1">
+					<h3 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">MATLAB CFD: Advection & Diffusion</h3>
+					<p style="color: #333;">The next topic is solving the diffusion equation and the advection-diffusion equation. These equations model how tracers in a flow field will naturally diffuse and disperse, or be moved by a mean flow. 1st-order forward and central differencing and periodic boundary conditions were used here.</p>
+					<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+					
+						<!-- Embedded MP4 Video -->
+						<video controls autoplay loop muted playsinline style="width: 100%; height: auto; display: block; border-radius: 4px;">
+							<source src="images/2D_diffusion_tracer.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+
+						<p style="color: #333; margin-top: 0.8em;">
+							<strong style="color: #333">This animation shows the 2D diffusion equation solution for a tracer initially shaped like the UCSD Triton logo.</strong>
+						</p>
+					</div>
+
+					<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+					
+						<!-- Embedded MP4 Video -->
+						<video controls autoplay loop muted playsinline style="width: 100%; height: auto; display: block; border-radius: 4px;">
+							<source src="images/advection_1st_order.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+
+						<p style="color: #333; margin-top: 0.8em;">
+							<strong style="color: #333">This animation shows the 2D advection-diffusion equation solution for a tracer initially shaped like the UCSD Triton logo. The logo is pushed up and to thr right while actively diffusing. Periodic boundary conditions allow the shape to return to the domain when it leaves. First-order backwards differencing was used in this simulation.</strong>
+						</p>
+					</div>
+
+					<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+					
+						<!-- Embedded MP4 Video -->
+						<video controls autoplay loop muted playsinline style="width: 100%; height: auto; display: block; border-radius: 4px;">
+							<source src="images/burgers_equation_solution.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+
+						<p style="color: #333; margin-top: 0.8em;">
+							<strong style="color: #333">This animation shows the 2D solution to the Burgers equation, which is similar to the advection-diffusion equation except it has a nonlinear advection term. This is solved using a predictor-correcter method.</strong>
+						</p>
+					</div>
+				</section>
+
+				<section id="three" class="wrapper style1">
+					<h3 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">MATLAB CFD Visualization: Energy Equation</h3>
+					<p style="color: #333;">Data was provided for a supersonic jet using a Large Eddy Simulation. This visualization shows key variables.</p>
+					<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<a href="images/supersonic.jpeg" class="image fit thumb">
+								<img src="images/supersonic.jpeg" alt="Supersonic Jet" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">This figure shows several variables for a supersonic jet. The dynamic viscosity was found using Sutherland's law, and conversion between conservative and primitive variables is used.  </strong>
+							</p>
+						</div>
+					</div>
+				</section>
+
+				<section id="four" class="wrapper style1">
+					<h3 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">MATLAB CFD: Mach 4 Flow over a Flat Plate</h3>
+					<p style="color: #333;">For this simulation, Mach 4 flow over a flat plate was analyzed. The horizontal length of the plate was 1(10^-5) meters, and the vertical length scale was 8(10^-6) meters. A fixed time step was used to avoid diveregence of the solution. Standard pressure, temperature, and parameters for air were used, and the solution was found using MacCormack's Method. MacCormack's Method utilizes a predictor-corrector scheme in space to provide a more accurate simulation.</p>
+					<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<a href="images/m4.jpeg" class="image fit thumb">
+								<img src="images/m4.jpeg" alt="Mach 4 Flow over a Flat Plate" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">This figure shows final results of the steady-state solution for the Mach 4 flow. A shockwave forms from the leading edge of the plate as seen in the pressure, density, and y-velocity subplots.</strong>
+							</p>
+						</div>
+					</div>
+
+					<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<a href="images/m4s.jpeg" class="image fit thumb">
+								<img src="images/m4s.jpeg" alt="Mach 4 Flow over a Flat Plate" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">The Schlieren image uses changes in density to show shockwave behavior. It is frequcently used in supersonic flow visualizations.</strong>
+							</p>
+						</div>
+					</div>
+
+					<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<a href="images/m4a.jpeg" class="image fit thumb">
+								<img src="images/m4a.jpeg" alt="Mach 4 Flow over a Flat Plate" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">Taking a closer look at the Mach angle can give insight into the accuracy of our simulation. To find the Mach angle, my team member and I found maximum density in each x bin, then fit a slope to the points and calculated the angle. The angle is ~4 degrees off of what theory predicts, this is likely due to MacCormack's method not being robust enough to simulate the flow. </strong>
+							</p>
+						</div>
+					</div>
+
+					<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<a href="images/m4c.jpeg" class="image fit thumb">
+								<img src="images/m4c.jpeg" alt="Mach 4 Flow over a Flat Plate" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">Convergence of the Mach 4 flow was set by a percent change threshold. The norm of the x-velocity was found at each time step, and once the percent chage betwee subsequent time steps went below 0.5%, the simulation was converged.</strong>
+							</p>
+						</div>
+					</div>
+				</section>
+
+				<section id="five" class="wrapper style1">
+					<h3 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">Ansys Fluent: Particle Tracking</h3>
+					<p style="color: #333;">The final project in my CFD course involved simulating particle tracking using Ansys Fluent.</p>
+					<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<a href="images/cfd_turbulent_dissipation.jpeg" class="image fit thumb">
+								<img src="images/cfd_turbulent_dissipation.jpeg" alt="Turbulent Dissipation" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333">This figure shows the turbulent dissipation rate in the submarine canyon. The results were compared to theoretical predictions and found to be in good agreement.</strong>
+							</p>
+						</div>
+					</div>	
+
+
+
+
+
+
+
+
+
+				
+
+
+
+
+				
+								
+			</div>
+
+								
+				
+				
+				
+				
+				
+
+
+					
+
+					
+	
+					
+
+					
+			</div>
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
