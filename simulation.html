@@ -157,7 +157,7 @@
 					<h3 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">MATLAB CFD Visualization: Energy Equation</h3>
 					<p style="color: #333;">Data was provided for a supersonic jet using a Large Eddy Simulation. This visualization shows key variables.</p>
 					<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
-							<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+						<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
 							<a href="images/supersonic.jpeg" class="image fit thumb">
 								<img src="images/supersonic.jpeg" alt="Supersonic Jet" />
 							</a>
@@ -172,7 +172,7 @@
 					<h3 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">MATLAB CFD: Mach 4 Flow over a Flat Plate</h3>
 					<p style="color: #333;">For this simulation, Mach 4 flow over a flat plate was analyzed. The horizontal length of the plate was 1(10^-5) meters, and the vertical length scale was 8(10^-6) meters. A fixed time step was used to avoid diveregence of the solution. Standard pressure, temperature, and parameters for air were used, and the solution was found using MacCormack's Method. MacCormack's Method utilizes a predictor-corrector scheme in space to provide a more accurate simulation.</p>
 					<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
-							<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+						<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
 							<a href="images/m4.jpeg" class="image fit thumb">
 								<img src="images/m4.jpeg" alt="Mach 4 Flow over a Flat Plate" />
 							</a>
@@ -183,7 +183,7 @@
 					</div>
 
 					<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
-							<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+						<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
 							<a href="images/m4s.jpeg" class="image fit thumb">
 								<img src="images/m4s.jpeg" alt="Mach 4 Flow over a Flat Plate" />
 							</a>
@@ -194,7 +194,7 @@
 					</div>
 
 					<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
-							<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+						<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
 							<a href="images/m4a.jpeg" class="image fit thumb">
 								<img src="images/m4a.jpeg" alt="Mach 4 Flow over a Flat Plate" />
 							</a>
@@ -205,7 +205,7 @@
 					</div>
 
 					<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
-							<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+						<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
 							<a href="images/m4c.jpeg" class="image fit thumb">
 								<img src="images/m4c.jpeg" alt="Mach 4 Flow over a Flat Plate" />
 							</a>
@@ -217,33 +217,479 @@
 				</section>
 
 				<section id="five" class="wrapper style1">
-					<h3 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">Ansys Fluent: Particle Tracking</h3>
-					<p style="color: #333;">The final project in my CFD course involved simulating particle tracking using Ansys Fluent.</p>
-					<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+					<h3 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">Ansys Fluent: Particle Tracking Setup</h3>
+					<p style="color: #333;">The final project in my CFD course involved simulating particle tracking using Ansys Fluent. The COVID-19 pandemic introduced unique safety concerns for close contact in-person class settings at universities around the world. In this study, the spreading of COVID-19 tracer particles will be simulated in a small classroom with some ventilation. Parameter studies involving varying the ventilation inlet flow rate, the number of outlets (“opening doors”, etc.), and varying rates of breathing were tested for changes in virus concentration.</p> 
+					<p style="color: #333;">The main questions considered in these studies include:</p>
+    
+					<div class="row">
+						<div class="col-12">
+							<ul style="color: #333; line-height: 1.8; font-size: 1.05em;">
+								<li><strong style="color: #333;">How do increased ventilation rates change virus spreading?</strong></li>
+								<li><strong style="color: #333;">Does opening doors help with virus removal in a room?</strong></li>
+								<li><strong style="color: #333;">How does virus spreading change over time under different ventilation schemes?</strong></li>
+							</ul>
+						</div>
+					</div>
+					<p style="color: #333;">The main parameters being tracked was the air changes per hour (ACH), which measured how quickly the volume of air in the room was fully refreshed, how many COVID particles were removed from the room, and the volume integral of the floating particles. Particle tracking and concentration plots were also made. </p>
+					<p style="color: #333;">The geometry of the classroom originally started as a 15 foot by 12.83 foot floor with 9 foot tall ceilings and a ventilation inlet and outlet that are both one foot in diameter. Students, desks, a teaching podium, and a door were added to the model.</p>
+					
+					<div class="row gtr-50 gtr-uniform">
+							<!-- Left Image -->
+							<div class="col-6 col-12-xsmall">
+								<a href="images/ansys1.jpeg" class="image fit thumb">
+									<img src="images/ansys1.jpeg" alt="..." style="width: 100%; height: 250px; object-fit: cover;" />                </a>
+								<p style="color: #333; margin-top: 0.8em;">
+									<strong style="color: #333">Model of the inside of the classroom containing students and desks.</strong></p>
+							</div>
+
+							<!-- Right Image -->
+							<div class="col-6 col-12-xsmall">
+								<a href="images/ansys2.jpeg" class="image-block">
+									<img src="images/ansys2.jpeg" alt="..." style="width: 100%; height: 250px; object-fit: cover;" />                </a>
+								<p style="color: #333; margin-top: 0.3em;">
+									<strong style="color: #333">Model of the outside of the classroom, with walls, inlet and outlet vents, and a door.</strong></p>
+							</div>
+						</div>
+
+						<p></p>
+						<p style="color: #333;">The model is set up to simulate COVID-19 particles as a discrete particle phase with custom sizes that are advected by a continuous phase, which is the airflow in the room. The particles are liquid water and considered inert, so they will not change phase during the simulation. The k-omega turbulence model with default parameters was used to simulate viscous effects throughout the fluid. </p>
+
+
+						<p style="color: #333;">Boundary conditions were specified for the continuous phase airflow, the dispersed COVID particles, and the surrounding walls of the fluid domain.</p>
+    
+						<div class="table-wrapper" style="overflow-x: auto; margin-bottom: 2em;">
+							<table style="width: 100%; border-collapse: collapse; color: #333; font-size: 0.9em;">
+								<thead>
+									<tr style="background-color: #f2f2f2; border-bottom: 2px solid #ccc;">
+										<th style="padding: 10px; text-align: left; font-weight: bold;">Boundary Location</th>
+										<th style="padding: 10px; text-align: left; font-weight: bold;">Phase / Domain</th>
+										<th style="padding: 10px; text-align: left; font-weight: bold;">Type / Condition</th>
+										<th style="padding: 10px; text-align: left; font-weight: bold;">Key Parameters &amp; Values</th>
+									</tr>
+								</thead>
+								<tbody>
+									<!-- Air Vent Inlet -->
+									<tr style="border-bottom: 1px solid #eee;">
+										<td rowspan="2" style="padding: 10px; vertical-align: top; font-weight: bold;">Air Vent Inlet</td>
+										<td style="padding: 10px; vertical-align: top;">Continuous Phase</td>
+										<td style="padding: 10px; vertical-align: top;">Velocity Inlet</td>
+										<td style="padding: 10px; vertical-align: top;">
+											• Fluid: Air<br>
+											• Velocity Rate: 0.05 m/s (normal to surface)<br>
+											• Gauge Pressure: 0 Pa<br>
+											• Turbulent Intensity: 5%<br>
+											• Turbulent Viscosity Ratio: 10
+										</td>
+									</tr>
+									<tr style="border-bottom: 1px solid #ddd; background-color: #fdfdfd;">
+										<td style="padding: 10px; vertical-align: top;">Discrete Phase</td>
+										<td style="padding: 10px; vertical-align: top;">Escape</td>
+										<td style="padding: 10px; vertical-align: top;">Allows particles to exit domain if physics dictate.</td>
+									</tr>
+
+									<!-- Air Vent Outlet & Door Outlet -->
+									<tr style="border-bottom: 1px solid #eee;">
+										<td rowspan="2" style="padding: 10px; vertical-align: top; font-weight: bold;">Air Vent Outlet / Door Outlet</td>
+										<td style="padding: 10px; vertical-align: top;">Continuous Phase</td>
+										<td style="padding: 10px; vertical-align: top;">Pressure Outlet</td>
+										<td style="padding: 10px; vertical-align: top;">
+											• Gauge Pressure: 0 Pa<br>
+											• Backflow Direction: Normal to boundary<br>
+											• Backflow Pressure Spec: Absolute pressure<br>
+											• Turbulent Intensity: 5%<br>
+											• Turbulent Viscosity Ratio: 10
+										</td>
+									</tr>
+									<tr style="border-bottom: 1px solid #ddd; background-color: #fdfdfd;">
+										<td style="padding: 10px; vertical-align: top;">Discrete Phase</td>
+										<td style="padding: 10px; vertical-align: top;">Escape</td>
+										<td style="padding: 10px; vertical-align: top;">Allows flow and particles to freely escape at ambient atmospheric pressure.</td>
+									</tr>
+
+									<!-- Sick Mouth Inlet -->
+									<tr style="border-bottom: 1px solid #eee;">
+										<td rowspan="2" style="padding: 10px; vertical-align: top; font-weight: bold;">Sick Mouth Inlet</td>
+										<td style="padding: 10px; vertical-align: top;">Continuous Phase</td>
+										<td style="padding: 10px; vertical-align: top;">Velocity Inlet</td>
+										<td style="padding: 10px; vertical-align: top;">
+											• Fluid: Air<br>
+											• Velocity Rate: 0.185 m/s (normal to surface)<br>
+											• Gauge Pressure: 0 Pa<br>
+											• Turbulent Intensity: 5%<br>
+											• Turbulent Viscosity Ratio: 10
+										</td>
+									</tr>
+									<tr style="border-bottom: 1px solid #ddd; background-color: #fdfdfd;">
+										<td style="padding: 10px; vertical-align: top;">Discrete Phase</td>
+										<td style="padding: 10px; vertical-align: top;">Escape</td>
+										<td style="padding: 10px; vertical-align: top;">Particles escape boundary (particles are advected away by breathing).</td>
+									</tr>
+
+									<!-- Classroom Walls -->
+									<tr style="border-bottom: 1px solid #eee;">
+										<td rowspan="2" style="padding: 10px; vertical-align: top; font-weight: bold;">Classroom Walls</td>
+										<td style="padding: 10px; vertical-align: top;">Continuous Phase</td>
+										<td style="padding: 10px; vertical-align: top;">Stationary Wall</td>
+										<td style="padding: 10px; vertical-align: top;">
+											• Fluid: Air<br>
+											• Shear Condition: No-slip<br>
+											• Roughness Model: Standard
+										</td>
+									</tr>
+									<tr style="border-bottom: 1px solid #ddd; background-color: #fdfdfd;">
+										<td style="padding: 10px; vertical-align: top;">Discrete Phase</td>
+										<td style="padding: 10px; vertical-align: top;">Trap</td>
+										<td style="padding: 10px; vertical-align: top;">COVID particles stick upon contact with the wall.</td>
+									</tr>
+
+									<!-- Interior Room -->
+									<tr style="border-bottom: 1px solid #ddd;">
+										<td style="padding: 10px; vertical-align: top; font-weight: bold;">Interior Room</td>
+										<td style="padding: 10px; vertical-align: top;">Domain</td>
+										<td style="padding: 10px; vertical-align: top;">Solid</td>
+										<td style="padding: 10px; vertical-align: top;">Standard interior region setup.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<p style="color: #333;">The model and parameters defined below represent the baseline case of the simulation. Other parameter studies build off this baseline case by varying one or more parameters, with all unique studies starting from this same baseline setup. Following is general setup information:</p>
+
+						<div class="row">
+							<div class="col-12">
+							<ul style="color: #333; line-height: 1.8;">
+								<li><strong style="color: #333;">Airflow is considered incompressible, so the energy equation is not utilized. Gravity is imposed at 9.81 m/s² downward through the classroom (same direction as inlet airflow). Radiation is not considered.</strong></li>
+								<li><strong style="color: #333;">Viscous & Cell Zone Conditions:</strong> SST k-omega turbulence model is used for viscous considerations with default values. The interior room is set to a fluid cell zone condition.</li>
+								<li><strong style="color: #333;">Continuous Phase (Air):</strong> Modeled as standard air with a constant density of 1.225 kg/m³ and a constant viscosity of 1.7894(10⁻⁵) kg/(m·s).</li>
+								<li><strong style="color: #333;">Discrete Phase Model (DPM - COVID-19 Particles):</strong> 
+									<ul>
+										<li>COVID-19 particles are treated separately from surrounding airflow, interacting such that airflow advects particles, but particles do not affect airflow.</li>
+										<li>DPM phase updates every 10 iterations of the continuous phase.</li>
+										<li>Particles are dispersed continuously normal to the mouth of the sick person at breathing velocity, considered inert with no phase changes.</li>
+										<li>Modeled as liquid water droplets with a uniform diameter of 1 micron (Abuhegazy et al. 2020), utilizing a spherical momentum exchange drag law and discrete random walk turbulent diffusion with default constants.</li>
+									</ul>
+								</li>
+								<p style="color: #333;"><strong style="color: #333;">Solver & Convergence Criteria:</strong>
+									<ul>
+										<li>Simulations run at steady state (except for specific transient studies).</li>
+										<li>Convergence criteria set to 10⁻³ for continuity, x-, y-, and z-velocity, k, and omega.</li>
+										<li>Custom convergence criteria: If mass flow out of the primary outlet air vent reaches a change of 10⁻³ or less, the simulation terminates.</li>
+										<li>Simulations run to 400 iterations or until convergence criteria are met.</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						</div>
+
+						<p style="color: #333;">A grid refinement study was conducted to ensure mesh independence. </p>
+
+						<div class="table-wrapper" style="overflow-x: auto; margin-bottom: 2em;">
+							<table style="width: 100%; border-collapse: collapse; color: #333; font-size: 0.9em;">
+								<thead>
+									<tr style="background-color: #f2f2f2; border-bottom: 2px solid #ccc;">
+										<th style="padding: 10px; text-align: left; font-weight: bold;">Parameters</th>
+										<th style="padding: 10px; text-align: center; font-weight: bold;">Level 1</th>
+										<th style="padding: 10px; text-align: center; font-weight: bold;">Level 2</th>
+										<th style="padding: 10px; text-align: center; font-weight: bold;">Level 3</th>
+										<th style="padding: 10px; text-align: center; font-weight: bold;">Level 4</th>
+									</tr>
+								</thead>
+								<tbody>
+									<!-- Mesh Parameters -->
+									<tr style="background-color: #e6f2ff; font-weight: bold;">
+										<td colspan="5" style="padding: 8px 10px;">Mesh Metrics</td>
+									</tr>
+									<tr style="border-bottom: 1px solid #eee;">
+										<td style="padding: 10px;">Number of Cells</td>
+										<td style="padding: 10px; text-align: center;">12,106</td>
+										<td style="padding: 10px; text-align: center;">20,324</td>
+										<td style="padding: 10px; text-align: center;">83,087</td>
+										<td style="padding: 10px; text-align: center;">313,786</td>
+									</tr>
+									<tr style="border-bottom: 1px solid #eee; background-color: #fdfdfd;">
+										<td style="padding: 10px;">Minimum Orthogonality</td>
+										<td style="padding: 10px; text-align: center;">0.2218</td>
+										<td style="padding: 10px; text-align: center;">0.2001</td>
+										<td style="padding: 10px; text-align: center;">0.1703</td>
+										<td style="padding: 10px; text-align: center;">0.1155</td>
+									</tr>
+									<tr style="border-bottom: 1px solid #eee;">
+										<td style="padding: 10px;">Maximum Skewness</td>
+										<td style="padding: 10px; text-align: center;">0.5309</td>
+										<td style="padding: 10px; text-align: center;">0.5282</td>
+										<td style="padding: 10px; text-align: center;">0.6983</td>
+										<td style="padding: 10px; text-align: center;">0.6839</td>
+									</tr>
+									<tr style="border-bottom: 1px solid #eee; background-color: #fdfdfd;">
+										<td style="padding: 10px;">Local Sizing Size</td>
+										<td style="padding: 10px; text-align: center;">40 mm</td>
+										<td style="padding: 10px; text-align: center;">20 mm</td>
+										<td style="padding: 10px; text-align: center;">10 mm</td>
+										<td style="padding: 10px; text-align: center;">5 mm</td>
+									</tr>
+									<tr style="border-bottom: 1px solid #eee;">
+										<td style="padding: 10px;">Surface Mesh Min./Max.</td>
+										<td style="padding: 10px; text-align: center;">16 mm / 1048 mm</td>
+										<td style="padding: 10px; text-align: center;">8 mm / 512 mm</td>
+										<td style="padding: 10px; text-align: center;">4 mm / 256 mm</td>
+										<td style="padding: 10px; text-align: center;">2 mm / 128 mm</td>
+									</tr>
+									<tr style="border-bottom: 1px solid #eee; background-color: #fdfdfd;">
+										<td style="padding: 10px;">Number of Boundary Layers</td>
+										<td style="padding: 10px; text-align: center;">1</td>
+										<td style="padding: 10px; text-align: center;">2</td>
+										<td style="padding: 10px; text-align: center;">3</td>
+										<td style="padding: 10px; text-align: center;">6</td>
+									</tr>
+									<tr style="border-bottom: 1px solid #ddd;">
+										<td style="padding: 10px;">Volume Mesh Maximum</td>
+										<td style="padding: 10px; text-align: center;">512 mm</td>
+										<td style="padding: 10px; text-align: center;">256 mm</td>
+										<td style="padding: 10px; text-align: center;">100 mm</td>
+										<td style="padding: 10px; text-align: center;">64 mm</td>
+									</tr>
+
+									<!-- Solution Results -->
+									<tr style="background-color: #e6f2ff; font-weight: bold;">
+										<td colspan="5" style="padding: 8px 10px;">Solution Results</td>
+									</tr>
+									<tr style="border-bottom: 1px solid #eee;">
+										<td style="padding: 10px;">Outlet Mass Flow Rate</td>
+										<td style="padding: 10px; text-align: center;">-0.0047200 kg/s</td>
+										<td style="padding: 10px; text-align: center;">-0.0048300 kg/s</td>
+										<td style="padding: 10px; text-align: center;">-0.0048574 kg/s</td>
+										<td style="padding: 10px; text-align: center;">-0.0048645 kg/s</td>
+									</tr>
+									<tr style="border-bottom: 1px solid #ddd; background-color: #fdfdfd;">
+										<td style="padding: 10px;">Runtime</td>
+										<td style="padding: 10px; text-align: center;">78 s</td>
+										<td style="padding: 10px; text-align: center;">91 s</td>
+										<td style="padding: 10px; text-align: center;">331 s</td>
+										<td style="padding: 10px; text-align: center;">1,429 s</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
 							<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
-							<a href="images/cfd_turbulent_dissipation.jpeg" class="image fit thumb">
-								<img src="images/cfd_turbulent_dissipation.jpeg" alt="Turbulent Dissipation" />
+								<a href="images/ansys_grid.jpeg" class="image fit thumb">
+									<img src="images/ansys_grid.jpeg" alt="Ansys Grid" />
+								</a>
+								<p style="color: #333; margin-top: 0.8em;">
+									<strong style="color: #333">A figure displaing the results of the grid refinement study. It was decided that level 3 was sufficient for our simulations.</strong>
+								</p>
+							</div>
+						</div>
+
+						<h3 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">Ansys Fluent: Particle Tracking Results</h3>
+
+						<p style="color: #333;">To explore the effect of changes in ACH, a baseline steady-state case was produced for comparison; this case was the level three mesh with the previous parameter setup. To establish a frame of how results are visualized, the first simulation ran the baseline case at 1 ACH.</p>
+
+						<div class="image-block" style="margin-bottom: 2em; max-width: 50%; margin-left: auto; margin-right: auto;">
+							<a href="images/ansys_t1.jpeg" class="image fit thumb">
+								<img src="images/ansys_t1.jpeg" alt="Ansys T1" style="width: 100%; height: auto;" />
 							</a>
 							<p style="color: #333; margin-top: 0.8em;">
-								<strong style="color: #333">This figure shows the turbulent dissipation rate in the submarine canyon. The results were compared to theoretical predictions and found to be in good agreement.</strong>
+								<strong style="color: #333;">Steady-state results of DPM tracking for the 1 ACH case. The particles were expelled out of the sick person's mouth and tracked until steady state was reached or the particle left the domain, which is only possible through the top outlet vent.</strong>
 							</p>
 						</div>
-					</div>	
+
+						<p style="color: #333">In order to investigate the effect of increased flow rate into the system compared to the baseline case, the ACH was doubled, with all other parameters held constant. Another test ran with 3 ACH and then all simulations were repeated with the door open to allow for hopefully more escaped particles.</p>
+
+						<div class="image-block" style="margin-bottom: 2em; max-width: 50%; margin-left: auto; margin-right: auto;">
+							<a href="images/ansys_t2.jpeg" class="image fit thumb">
+								<img src="images/ansys_t2.jpeg" alt="Ansys T2" style="width: 100%; height: auto;" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333;">Steady-state results of DPM tracking for the 2 ACH case, and with the door open. It is clear that so e particles are escaping through the door, but many remain inside the classroom.</strong>
+							</p>
+						</div>
+
+						<div class="image-block" style="margin-bottom: 2em; max-width: 50%; margin-left: auto; margin-right: auto;">
+							<a href="images/ansys_t3.jpeg" class="image fit thumb">
+								<img src="images/ansys_t3.jpeg" alt="Ansys T3" style="width: 100%; height: auto;" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333;">Steady-state results of DPM tracking for the 3 ACH case, and with the door open. The amount of particles is getting more drastic, but more are leaving through the door.</strong>
+							</p>
+						</div>
+
+						<p style="color: #333;">The results of the steady-state simulations are given below, showing how changes in ACH and door statusaffect the percentage of DPM particles are removed (efficiency)</p>
+
+						<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<a href="images/ansys_T.jpeg" class="image fit thumb">
+								<img src="images/ansys_T.jpeg" alt="Ansys T3" style="width: 100%; height: auto;" />
+							</a>
+							<p style="color: #333; margin-top: 0.8em;">
+								<strong style="color: #333;">Steady-state results of DPM tracking for all cases.</strong>
+							</p>
+						</div>
+
+						<p style="color: #333;">For the steady state parameter study, increasing ACH correlated with an increase in escaped particles. When increased to 2 ACH for the closed door case, the ventilation effectiveness doubled. The recirculation zones generally got more packed over the ACH increase, with the largest vortices occurring near the air vent inlet.
+							Compared to the closed door cases, all the open door simulations predictably improved ventilation effectiveness and DPM concentration within the room. The highest percent effectiveness achieved was 57.78% with a DPM concentration of 3.48(10-17) kg for the 3 ACH open door case.
+						</p>
+
+						<p style="color: #333;">To investigate how the cough particles disperse initially, transient simulations were run. At first, parameters were kept constant as in the baseline case, with particles tracked as points. As with the baseline case, 82 particles were tracked with 1 ACH. Due to computational and time constraints, the transient simulation was modeled for 100-300 s periods, with a cough/sneeze velocity of 0.185 m/s.</p>
+						<div class="row gtr-50 gtr-uniform">
+						<div class="col-4 col-12-mobile">
+							<a href="images/ansys_t10.jpeg" class="image fit thumb">
+								<img src="images/ansys_t10.jpeg" alt="(a) t = 20 s" style="width: 100%; height: auto; display: block;" />
+							</a>
+							<p style="color: #333; text-align: center; margin-top: 0.5em; font-weight: bold;">(a) t = 20 s</p>
+						</div>
+						<div class="col-4 col-12-mobile">
+							<a href="images/ansys_t11.jpeg" class="image fit thumb">
+								<img src="images/ansys_t11.jpeg" alt="(b) t = 40 s" style="width: 100%; height: auto; display: block;" />
+							</a>
+							<p style="color: #333; text-align: center; margin-top: 0.5em; font-weight: bold;">(b) t = 40 s</p>
+						</div>
+						<div class="col-4 col-12-mobile">
+							<a href="images/ansys_t12.jpeg" class="image fit thumb">
+								<img src="images/ansys_t12.jpeg" alt="(c) t = 60 s" style="width: 100%; height: auto; display: block;" />
+							</a>
+							<p style="color: #333; text-align: center; margin-top: 0.5em; font-weight: bold;">(c) t = 60 s</p>
+						</div>
+					</div>
+
+					<!-- Bottom Row: 2 Centered Images -->
+					<div class="row gtr-50 gtr-uniform" style="justify-content: center; margin-top: 1em;">
+						<div class="col-4 col-12-mobile">
+							<a href="images/ansys_t13.jpeg" class="image fit thumb">
+								<img src="images/ansys_t13.jpeg" alt="(d) t = 80 s" style="width: 100%; height: auto; display: block;" />
+							</a>
+							<p style="color: #333; text-align: center; margin-top: 0.5em; font-weight: bold;">(d) t = 80 s</p>
+						</div>
+						<div class="col-4 col-12-mobile">
+							<a href="images/ansys_t14.jpeg" class="image fit thumb">
+								<img src="images/ansys_t14.jpeg" alt="(e) t = 100 s" style="width: 100%; height: auto; display: block;" />
+							</a>
+							<p style="color: #333; text-align: center; margin-top: 0.5em; font-weight: bold;">(e) t = 100 s</p>
+						</div>
+					</div>
+
+					<p style="color: #333;">The transient simulations show that the particles are advected by breathing, they do not spread rapidly in this scenario, but they would be very problematic for close contact. The next simulatio shows DPM spreading for a 10m/s uncovered cough.</p>
+
+					<div class="row gtr-50 gtr-uniform">
+						<div class="col-4 col-12-mobile">
+							<a href="images/ansys_t20.jpeg" class="image fit thumb">
+								<img src="images/ansys_t20.jpeg" alt="(a) t = 2 s" style="width: 100%; height: auto; display: block;" />
+							</a>
+							<p style="color: #333; text-align: center; margin-top: 0.5em; font-weight: bold;">(a) t = 2 s</p>
+						</div>
+						<div class="col-4 col-12-mobile">
+							<a href="images/ansys_t21.jpeg" class="image fit thumb">
+								<img src="images/ansys_t21.jpeg" alt="(b) t = 4 s" style="width: 100%; height: auto; display: block;" />
+							</a>
+							<p style="color: #333; text-align: center; margin-top: 0.5em; font-weight: bold;">(b) t = 4 s</p>
+						</div>
+						<div class="col-4 col-12-mobile">
+							<a href="images/ansys_t22.jpeg" class="image fit thumb">
+								<img src="images/ansys_t22.jpeg" alt="(c) t = 6 s" style="width: 100%; height: auto; display: block;" />
+							</a>
+							<p style="color: #333; text-align: center; margin-top: 0.5em; font-weight: bold;">(c) t = 6 s</p>
+						</div>
+					</div>
+
+					<!-- Bottom Row: 2 Centered Images -->
+					<div class="row gtr-50 gtr-uniform" style="justify-content: center; margin-top: 1em;">
+						<div class="col-4 col-12-mobile">
+							<a href="images/ansys_t23.jpeg" class="image fit thumb">
+								<img src="images/ansys_t23.jpeg" alt="(d) t = 30 s" style="width: 100%; height: auto; display: block;" />
+							</a>
+							<p style="color: #333; text-align: center; margin-top: 0.5em; font-weight: bold;">(d) t = 30 s</p>
+						</div>
+						<div class="col-4 col-12-mobile">
+							<a href="images/ansys_t24.jpeg" class="image fit thumb">
+								<img src="images/ansys_t24.jpeg" alt="(e) t = 60 s" style="width: 100%; height: auto; display: block;" />
+							</a>
+							<p style="color: #333; text-align: center; margin-top: 0.5em; font-weight: bold;">(e) t = 60 s</p>
+						</div>
+					</div>
+
+					<p style="color: #333;">The transient simulations show that the particles released from a large cough will rapidly spread away from the sick individual and surround the entire room relatively quickly. The following results show the exit mass flow rate and the DPM integrated concentration with varying ACH, DPM distribution type (breathing vs. cough), and runtime.</p>
+
+					<div class="table-wrapper" style="overflow-x: auto; margin-bottom: 2em;">
+						<table style="width: 100%; border-collapse: collapse; color: #333; font-size: 0.9em;">
+							<thead>
+								<tr style="background-color: #f2f2f2; border-bottom: 2px solid #ccc;">
+									<th style="padding: 10px; text-align: left; font-weight: bold;">Parameter Change</th>
+									<th style="padding: 10px; text-align: center; font-weight: bold;">Mass Flow Rate at Outlet (kg/s)</th>
+									<th style="padding: 10px; text-align: center; font-weight: bold;">Volume-Integral of DPM Concentration (kg)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr style="border-bottom: 1px solid #eee;">
+									<td style="padding: 10px;">1 ACH, 0.185 m/s cough, run to 100 s</td>
+									<td style="padding: 10px; text-align: center;">0.0049</td>
+									<td style="padding: 10px; text-align: center;">4.70(10⁻⁷)</td>
+								</tr>
+								<tr style="border-bottom: 1px solid #eee; background-color: #fdfdfd;">
+									<td style="padding: 10px;">2 ACH, 0.185 m/s cough, run to 100 s</td>
+									<td style="padding: 10px; text-align: center;">0.0093</td>
+									<td style="padding: 10px; text-align: center;">4.82(10⁻⁷)</td>
+								</tr>
+								<tr style="border-bottom: 1px solid #eee;">
+									<td style="padding: 10px;">3 ACH, 0.185 m/s cough, run to 100 s</td>
+									<td style="padding: 10px; text-align: center;">0.0138</td>
+									<td style="padding: 10px; text-align: center;">4.57(10⁻⁷)</td>
+								</tr>
+								<tr style="border-bottom: 1px solid #eee; background-color: #fdfdfd;">
+									<td style="padding: 10px;">1 ACH, 0.185 m/s cough, run to 300 s</td>
+									<td style="padding: 10px; text-align: center;">0.0049</td>
+									<td style="padding: 10px; text-align: center;">8.90(10⁻⁷)</td>
+								</tr>
+								<tr style="border-bottom: 1px solid #ddd;">
+									<td style="padding: 10px;">3 ACH, 0.185 m/s cough, run to 300 s</td>
+									<td style="padding: 10px; text-align: center;">0.0138</td>
+									<td style="padding: 10px; text-align: center;">9.14(10⁻⁷)</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<p style="color: #333;">In the closed door steady state parameter study it was clear that increasing ACH also increased ventilation effectiveness. However, results suggested that increasing the ACH rate beyond 3 did not produce much difference in effectiveness. Opening the door clearly allowed for easier escape of the COVID particles from the room. Also, by placing an outlet on the edge that was almost the full height of the domain, vertically dispersed particles were more likely to escape. It was difficult to use the transient (door closed) results to evaluate the effectiveness of increased ACH with respect to improving particle ejection from the room. However, visualization of the particle cloud was useful to infer how ACH affects particle distribution and recirculation. Overall, the results of this study suggested that increasing the number and area of outlets were most effective at particle ejection, with changes to ACH and adding inlet vents less so. Increasing the flow rate dispersed the particles further and more quickly, which was beneficial with the presence of the open door. These recommendations could be used to address safety concerns for future ariborne viral illnesses.</p>
+
+					</section>
+
+					<section id = 'six' class="wrapper style1">
+						<h3 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">Ansys Certifications</h3>
+						<p style="color: #333;">Through my CFD course at UCSD, I was given the opportunity to obtain Ansys certifications. I completed five certifications in the summer after the course and was retroactively awarded another later. The certifications are as follows:
+						<p style="margin-bottom: 0.5em;"><strong style="color: #333;">Ansys Professional</strong></p>
+						
+							<ul>
+							<li style="color: #333;">Getting Started with Ansys Fluent (July 2025)</li>
+						</ul>
+
+						<!-- Ansys Associate Section -->
+						<p style="margin-bottom: 0.5em;"><strong style="color: #333;">Ansys Associate</strong></p>
+						<ul>
+							<li style="color: #333;">Foundations in Fluid Dynamics using Ansys Fluent (July 2025)</li>
+							<li style="color: #333;">Fundamentals of Compressible Flows (July 2025)</li>
+							<li style="color: #333;">Foundations of Heat Transfer using Ansys Mechanical (August 2025)</li>
+							<li style="color: #333;">Foundations of Stress Analysis using Ansys Mechanical (July 2025)</li>
+							<li style="color: #333;">Heat Transfer for Structures (July 2025)</li>
+						</ul>
+
+						<p style="color: #333;">The certifications tested by knowledge on fluid dynamics and mechanics theory, as well as applications in Ansys Fluent and Mechanical. In Ansys Fluent I found drag coefficients, drag forces, velocity contours, and pressure coefficients for external flow around a sphere. I also found lift and drag coefficients for an airfoil, created pressure contours, and analyzed turbulent kinetic energy. The certifications also tested creating mesh geometry and ensuring proper quality and runtime was maintained. In Ansys Mechanical, I found normal elastic stresses and strains, shear stresses and strains, directional deformation, and thermal strains.</p>
+
+						<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+							<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
+								<a href="images/ansys_c.jpg" class="image fit thumb">
+									<img src="images/ansys_c.jpg" alt="Ansys Certification" />
+								</a>
+								<p style="color: #333; margin-top: 0.8em;">
+									<strong style="color: #333">Velocity magnitude contours on an airfoil.</strong>
+								</p>
+							</div>
+						</div>
 
 
+					</section>
 
-
-
-
-
-
-
-				
-
-
-
-
-				
+					</section id="conclusion" class="wrapper style1">
+						<h3 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">Conclusion</h3>
+						<p style="color: #333;">In conclusion, I have gained experience both developing my own CFD solvers in MATLAB and applying an industry-standard product like Ansys Fluent to a real-world problem. I have a strong fundamental understanding for how CFD solvers work, and the problems that occur when developing them and using them. I also have shown my ability to visualize CFD solutions, key variable fields, grid refinements, and other deliverables.</p>
 								
 			</div>
 
