@@ -1,50 +1,62 @@
 <!DOCTYPE HTML>
 <!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Strata by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Ian Cosgrove</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			/* Force image thumbnails and wrappers to have a white background */
-			.image.thumb,
-			.image.fit,
-			.image-block {
-				background-color: #ffffff !important;
-			}
+    <head>
+        <title>Ian Cosgrove</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            /* Force image thumbnails and wrappers to have a white background */
+            .image.thumb,
+            .image.fit,
+            .image-block {
+                background-color: #ffffff !important;
+            }
 
-			/* Remove gray overlays or default borders/shadows applied by Strata CSS */
-			.image.thumb:before,
-			.image.thumb:after {
-				background-color: rgba(255, 255, 255, 0) !important;
-				opacity: 0 !important;
-			}
+            /* Remove gray overlays or default borders/shadows applied by Strata CSS */
+            .image.thumb:before,
+            .image.thumb:after {
+                background-color: rgba(255, 255, 255, 0) !important;
+                opacity: 0 !important;
+            }
 
-			.image img {
-				background-color: #ffffff !important;
-			}
-		</style>
-	</head>
-	<body class="is-preload">
+            .image img {
+                background-color: #ffffff !important;
+            }
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/ian.jpeg" alt="Ian"></a>
-					<h1><strong>Ian Cosgrove 
-					</strong></a></h1>
-					<strong>
-						M.S. Mechanical Engineering - UC San Diego (2026)<br>
-					B.S. Mechanical Engineering - UC San Diego (2025)
-					</strong>
-					<br>San Diego, CA
-				</div>
-			</header>
+            /* Override Strata avatar size constraints */
+            #header .image.avatar {
+                width: 12em !important; /* Adjust size here (default is ~8em) */
+                max-width: 100% !important;
+                margin-bottom: 1.5em;
+            }
+
+            #header .image.avatar img {
+                width: 100% !important;
+                height: auto !important;
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+
+        <!-- Header -->
+            <header id="header">
+                <div class="inner">
+                    <a href="#" class="image avatar"><img src="images/ian.jpeg" alt="Ian"></a>
+                    <h1><strong>Ian Cosgrove 
+                    </strong></h1>
+                    <strong>
+                        M.S. Mechanical Engineering - UC San Diego (2026)<br>
+                        B.S. Mechanical Engineering - UC San Diego (2025)
+                    </strong>
+                    <br>San Diego, CA
+                </div>
+            </header>
 
 		<!-- Main -->
 			<div id="main">

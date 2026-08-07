@@ -1,50 +1,68 @@
 <!DOCTYPE HTML>
 <!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Strata by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Ian Cosgrove</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			/* Force image thumbnails and wrappers to have a white background */
-			.image.thumb,
-			.image.fit,
-			.image-block {
-				background-color: #ffffff !important;
-			}
+    <head>
+        <title>Ian Cosgrove</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            /* Force image thumbnails and wrappers to have a white background */
+            .image.thumb,
+            .image.fit,
+            .image-block {
+                background-color: #ffffff !important;
+            }
 
-			/* Remove gray overlays or default borders/shadows applied by Strata CSS */
-			.image.thumb:before,
-			.image.thumb:after {
-				background-color: rgba(255, 255, 255, 0) !important;
-				opacity: 0 !important;
-			}
+            /* Remove gray overlays or default borders/shadows applied by Strata CSS */
+            .image.thumb:before,
+            .image.thumb:after {
+                background-color: rgba(255, 255, 255, 0) !important;
+                opacity: 0 !important;
+            }
 
-			.image img {
-				background-color: #ffffff !important;
-			}
-		</style>
-	</head>
-	<body class="is-preload">
+            .image img {
+                background-color: #ffffff !important;
+            }
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/ian.jpeg" alt="Ian"></a>
-					<h1><strong>Ian Cosgrove 
-					</strong></a></h1>
-					<strong>
-						M.S. Mechanical Engineering - UC San Diego (2026)<br>
-					B.S. Mechanical Engineering - UC San Diego (2025)
-					</strong>
-					<br>San Diego, CA
-				</div>
-			</header>
+            /* Override Strata avatar size constraints */
+            #header .image.avatar {
+                width: 12em !important; /* Adjust size here (default is ~8em) */
+                max-width: 100% !important;
+                margin-bottom: 1.5em;
+            }
+
+            #header .image.avatar img {
+                width: 100% !important;
+                height: auto !important;
+            }
+
+			#header {
+				background-image: url("images/cover.jpg"), url("images/cover.jpg") !important;
+				background-position: top left, center center !important;
+				background-size: auto, cover !important;
+			}
+        </style>
+    </head>
+    <body class="is-preload">
+
+        <!-- Header -->
+            <header id="header">
+                <div class="inner">
+                    <a href="#" class="image avatar"><img src="images/ian.jpeg" alt="Ian"></a>
+                    <h1><strong>Ian Cosgrove 
+                    </strong></h1>
+                    <strong>
+                        M.S. Mechanical Engineering - UC San Diego (2026)<br>
+                        B.S. Mechanical Engineering - UC San Diego (2025)
+                    </strong>
+                    <br>San Diego, CA
+                </div>
+            </header>
 
 		<!-- Main -->
 			<div id="main">
@@ -58,81 +76,81 @@
 
 				<!-- Two -->
 				 <section id="two" style="padding-top: 0;">
-    <h2 style="text-align: center; font-weight: bold; font-size: 32px; color: #333; margin-top: 0; margin-bottom: 0.5em;">Projects</h2>
-    <div class="row" style="text-align: center; display: flex; flex-wrap: wrap;">
-        
-        <!-- Row 1: Turbulence -->
-        <article class="col-6 col-12-xsmall work-item" style="display: flex; margin-bottom: 2em;">
-            <a href="turb_page.html" style="text-decoration: none; display: flex; flex-direction: column; width: 100%;">
-                <div style="height: 160px; display: flex; align-items: flex-end; justify-content: center; margin-bottom: 0.5em;">
-                    <img src="images/breaking.jpeg" alt="Environmental Fluid Dynamics" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 6px;" />
-                </div>
-                <div>
-                    <h3 style="color: #333; margin-top: 0;">Environmental Fluid Dynamics: Turbulence</h3>
-                    <p style="color: #333;">Graduate Research</p>
-                    <p style="color: #00abc2; font-weight: bold;">Click here for more details.</p>
-                </div>
-            </a>
-        </article>
+					<h2 style="text-align: center; font-weight: bold; font-size: 32px; color: #333; margin-top: 0; margin-bottom: 0.5em;">Projects</h2>
+					<div class="row" style="text-align: center; display: flex; flex-wrap: wrap;">
+						
+						<!-- Row 1: Turbulence -->
+						<article class="col-6 col-12-xsmall work-item" style="display: flex; margin-bottom: 2em;">
+							<a href="turb_page.html" style="text-decoration: none; display: flex; flex-direction: column; width: 100%;">
+								<div style="height: 160px; display: flex; align-items: flex-end; justify-content: center; margin-bottom: 0.5em;">
+									<img src="images/breaking.jpeg" alt="Environmental Fluid Dynamics" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 6px;" />
+								</div>
+								<div>
+									<h3 style="color: #333; margin-top: 0;">Environmental Fluid Dynamics: Turbulence</h3>
+									<p style="color: #333;">Graduate Research</p>
+									<p style="color: #00abc2; font-weight: bold;">Click here for more details.</p>
+								</div>
+							</a>
+						</article>
 
-        <!-- Row 1: Simulation & Modeling -->
-        <article class="col-6 col-12-xsmall work-item" style="display: flex; margin-bottom: 2em;">
-            <a href="simulation.html" style="text-decoration: none; display: flex; flex-direction: column; width: 100%;">
-                <div style="height: 160px; display: flex; align-items: flex-end; justify-content: center; margin-bottom: 0.5em;">
-                    <img src="images/ansys_c.jpg" alt="Environmental Fluid Dynamics" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 6px;" />
-                </div>
-                <div>
-                    <h3 style="color: #333; margin-top: 0;">Simulation & Modeling</h3>
-                    <p style="color: #333;">Mechanical Engineering Coursework</p>
-                    <p style="color: #00abc2; font-weight: bold;">Click here for more details.</p>
-                </div>
-            </a>
-        </article>
+						<!-- Row 1: Simulation & Modeling -->
+						<article class="col-6 col-12-xsmall work-item" style="display: flex; margin-bottom: 2em;">
+							<a href="simulation.html" style="text-decoration: none; display: flex; flex-direction: column; width: 100%;">
+								<div style="height: 160px; display: flex; align-items: flex-end; justify-content: center; margin-bottom: 0.5em;">
+									<img src="images/ansys_c.jpg" alt="Environmental Fluid Dynamics" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 6px;" />
+								</div>
+								<div>
+									<h3 style="color: #333; margin-top: 0;">Simulation & Modeling</h3>
+									<p style="color: #333;">Mechanical Engineering Coursework</p>
+									<p style="color: #00abc2; font-weight: bold;">Click here for more details.</p>
+								</div>
+							</a>
+						</article>
 
-        <!-- Row 2: Underwater Acoustics -->
-        <article class="col-6 col-12-xsmall work-item" style="display: flex; margin-bottom: 2em;">
-            <a href="underwater_acoustics.html" style="text-decoration: none; display: flex; flex-direction: column; width: 100%;">
-                <div style="height: 160px; display: flex; align-items: flex-end; justify-content: center; margin-bottom: 0.5em;">
-                    <img src="images/9030_clean.jpeg" alt="Underwater Acoustics" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 6px;" />
-                </div>
-                <div>
-                    <h3 style="color: #333; margin-top: 0;">Underwater Acoustics</h3>
-                    <p style="color: #333;">Undergraduate Research</p>
-                    <p style="color: #00abc2; font-weight: bold;">Click here for more details.</p>
-                </div>
-            </a>
-        </article>
+						<!-- Row 2: Underwater Acoustics -->
+						<article class="col-6 col-12-xsmall work-item" style="display: flex; margin-bottom: 2em;">
+							<a href="underwater_acoustics.html" style="text-decoration: none; display: flex; flex-direction: column; width: 100%;">
+								<div style="height: 160px; display: flex; align-items: flex-end; justify-content: center; margin-bottom: 0.5em;">
+									<img src="images/9030_clean.jpeg" alt="Underwater Acoustics" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 6px;" />
+								</div>
+								<div>
+									<h3 style="color: #333; margin-top: 0;">Underwater Acoustics</h3>
+									<p style="color: #333;">Undergraduate Research</p>
+									<p style="color: #00abc2; font-weight: bold;">Click here for more details.</p>
+								</div>
+							</a>
+						</article>
 
-        <!-- Row 2: Oceanographic Data Visualization -->
-        <article class="col-6 col-12-xsmall work-item" style="display: flex; margin-bottom: 2em;">
-            <a href="data_visuals.html" style="text-decoration: none; display: flex; flex-direction: column; width: 100%;">
-                <div style="height: 160px; display: flex; align-items: flex-end; justify-content: center; margin-bottom: 0.5em;">
-                    <img src="images/auv_cmap_notitle.jpeg" alt="Oceanographic Data Visualization" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 6px;" />
-                </div>
-                <div>
-                    <h3 style="color: #333; margin-top: 0;">Oceanographic Data Visualization</h3>
-                    <p style="color: #333;">Undergraduate & Graduate Research</p>
-                    <p style="color: #00abc2; font-weight: bold;">Click here for more details.</p>
-                </div>
-            </a>
-        </article>
+						<!-- Row 2: Oceanographic Data Visualization -->
+						<article class="col-6 col-12-xsmall work-item" style="display: flex; margin-bottom: 2em;">
+							<a href="data_visuals.html" style="text-decoration: none; display: flex; flex-direction: column; width: 100%;">
+								<div style="height: 160px; display: flex; align-items: flex-end; justify-content: center; margin-bottom: 0.5em;">
+									<img src="images/auv_cmap_notitle.jpeg" alt="Oceanographic Data Visualization" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 6px;" />
+								</div>
+								<div>
+									<h3 style="color: #333; margin-top: 0;">Oceanographic Data Visualization</h3>
+									<p style="color: #333;">Undergraduate & Graduate Research</p>
+									<p style="color: #00abc2; font-weight: bold;">Click here for more details.</p>
+								</div>
+							</a>
+						</article>
 
-        <!-- Row 3: Carbon Capture (Centered & 40% Max Width) -->
-        <article class="col-12 work-item" style="margin: 0 auto 2em auto;">
-            <a href="carbon_capture.html" style="text-decoration: none; display: block;">
-                <div style="height: 160px; display: flex; align-items: flex-end; justify-content: center; margin-bottom: 0.5em;">
-                    <img src="images/slide.jpeg" alt="Carbon Capture" style="max-width: 40%; max-height: 100%; object-fit: contain; border-radius: 6px;" />
-                </div>
-                <div>
-                    <h3 style="color: #333; margin-top: 0;">Carbon Capture</h3>
-                    <p style="color: #333;">Mechanical Engineering Undergraduate Senior Capstone</p>
-                    <p style="color: #00abc2; font-weight: bold;">Click here for more details.</p>
-                </div>
-            </a>
-        </article>
+						<!-- Row 3: Carbon Capture (Centered & 40% Max Width) -->
+						<article class="col-12 work-item" style="margin: 0 auto 2em auto;">
+							<a href="carbon_capture.html" style="text-decoration: none; display: block;">
+								<div style="height: 160px; display: flex; align-items: flex-end; justify-content: center; margin-bottom: 0.5em;">
+									<img src="images/slide.jpeg" alt="Carbon Capture" style="max-width: 40%; max-height: 100%; object-fit: contain; border-radius: 6px;" />
+								</div>
+								<div>
+									<h3 style="color: #333; margin-top: 0;">Carbon Capture</h3>
+									<p style="color: #333;">Mechanical Engineering Undergraduate Senior Capstone</p>
+									<p style="color: #00abc2; font-weight: bold;">Click here for more details.</p>
+								</div>
+							</a>
+						</article>
 
-    </div>
-</section>
+					</div>
+				</section>
 
 						<!-- Three	-->
 						<section id="three" style="padding-top: 4em;">
