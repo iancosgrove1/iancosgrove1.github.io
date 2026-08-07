@@ -52,7 +52,25 @@
 				<section id="one">
 					<div class="inner">	
 						<h2 style="text-align: center; font-weight: bold; font-size: 32px; color: #333;">Simulation & Modeling</h2>
-						<p style="color: #333;">During my time as an undergraduate student at UC San Diego, I had the opportunity to take a class on Computational Fluid Dynamics. This course provided me with valuable skills: learning the principles behind discretization, developing a CFD solver in MATLAB, running simulations in Ansys Fluent, and learning how professional CFD solvers work. After complteing the course, I was given the opportunity to further strengthen my skills with Ansys certifications. In this section, I will summarize my projects and certification skills.</p>
+						<p style="color: #333;">During my time as an undergraduate student at UC San Diego, I had the opportunity to take a class on Computational Fluid Dynamics. This course provided me with valuable skills: learning the principles behind discretization, developing a CFD solver in MATLAB, running simulations in Ansys Fluent, and learning how professional CFD solvers work. After completing the course, I was given the opportunity to further strengthen my skills with Ansys certifications. In this section, I will summarize my projects and certification skills.</p>
+					</div>
+				</section>
+
+				<section id="toc" style="margin-bottom: 3em;">
+					<div class="inner">
+						<h2 style="font-weight: bold; font-size: 24px; color: #333; text-align: center;">Table of Contents</h2>
+						<ul style="list-style-type: none; padding-left: 0;">
+
+							<li style="margin-bottom: 0.5em;"><a href="#one" style="color: #0066cc; text-decoration: underline;">MATLAB CFD Visualization</a></li>
+							<li style="margin-bottom: 0.5em;"><a href="#two" style="color: #0066cc; text-decoration: underline;">MATLAB CFD: Advection & Diffusion</a></li>
+							<li style="margin-bottom: 0.5em;"><a href="#three" style="color: #0066cc; text-decoration: underline;">MATLAB CFD Visualization: Energy Equation</a></li>
+							<li style="margin-bottom: 0.5em;"><a href="#four" style="color: #0066cc; text-decoration: underline;">MATLAB CFD: Mach 4 Flow over a Flat Plate</a></li>
+							<li style="margin-bottom: 0.5em;"><a href="#five" style="color: #0066cc; text-decoration: underline;">Ansys Fluent: Particle Tracking Setup</a></li>
+							<li style="margin-bottom: 0.5em;"><a href="#six" style="color: #0066cc; text-decoration: underline;">Ansys Fluent: Particle Tracking Results</a></li>
+							<li style="margin-bottom: 0.5em;"><a href="#seven" style="color: #0066cc; text-decoration: underline;">Ansys Certifications</a></li>
+							<li style="margin-bottom: 0.5em;"><a href="#eight" style="color: #0066cc; text-decoration: underline;">Conclusion</a></li>
+						</ul>
+					
 					</div>
 				</section>
 				
@@ -170,7 +188,7 @@
 
 				<section id="four" class="wrapper style1">
 					<h3 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">MATLAB CFD: Mach 4 Flow over a Flat Plate</h3>
-					<p style="color: #333;">For this simulation, Mach 4 flow over a flat plate was analyzed. The horizontal length of the plate was 1(10^-5) meters, and the vertical length scale was 8(10^-6) meters. A fixed time step was used to avoid diveregence of the solution. Standard pressure, temperature, and parameters for air were used, and the solution was found using MacCormack's Method. MacCormack's Method utilizes a predictor-corrector scheme in space to provide a more accurate simulation.</p>
+					<p style="color: #333;">For this simulation, Mach 4 flow over a flat plate was analyzed. The horizontal length of the plate was 1(10^-5) meters, and the vertical length scale was 8(10^-6) meters. A fixed time step was used to avoid divergence of the solution. Standard pressure, temperature, and parameters for air were used, and the solution was found using MacCormack's Method. MacCormack's Method utilizes a predictor-corrector scheme in space to provide a more accurate simulation.</p>
 					<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
 						<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
 							<a href="images/m4.jpeg" class="image fit thumb">
@@ -188,7 +206,7 @@
 								<img src="images/m4s.jpeg" alt="Mach 4 Flow over a Flat Plate" />
 							</a>
 							<p style="color: #333; margin-top: 0.8em;">
-								<strong style="color: #333">The Schlieren image uses changes in density to show shockwave behavior. It is frequcently used in supersonic flow visualizations.</strong>
+								<strong style="color: #333">The Schlieren image uses changes in density to show shockwave behavior. It is frequently used in supersonic flow visualizations.</strong>
 							</p>
 						</div>
 					</div>
@@ -210,7 +228,7 @@
 								<img src="images/m4c.jpeg" alt="Mach 4 Flow over a Flat Plate" />
 							</a>
 							<p style="color: #333; margin-top: 0.8em;">
-								<strong style="color: #333">Convergence of the Mach 4 flow was set by a percent change threshold. The norm of the x-velocity was found at each time step, and once the percent chage betwee subsequent time steps went below 0.5%, the simulation was converged.</strong>
+								<strong style="color: #333">Convergence of the Mach 4 flow was set by a percent change threshold. The norm of the x-velocity was found at each time step, and once the percent change between subsequent time steps went below 0.5%, the simulation was converged.</strong>
 							</p>
 						</div>
 					</div>
@@ -477,10 +495,13 @@
 									<img src="images/ansys_grid.jpeg" alt="Ansys Grid" />
 								</a>
 								<p style="color: #333; margin-top: 0.8em;">
-									<strong style="color: #333">A figure displaing the results of the grid refinement study. It was decided that level 3 was sufficient for our simulations.</strong>
+									<strong style="color: #333">A figure displaying the results of the grid refinement study. It was decided that level 3 was sufficient for our simulations.</strong>
 								</p>
 							</div>
 						</div>
+						</section>
+
+						<section id="six" class="wrapper style1">
 
 						<h3 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">Ansys Fluent: Particle Tracking Results</h3>
 
@@ -515,7 +536,7 @@
 							</p>
 						</div>
 
-						<p style="color: #333;">The results of the steady-state simulations are given below, showing how changes in ACH and door statusaffect the percentage of DPM particles are removed (efficiency)</p>
+						<p style="color: #333;">The results of the steady-state simulations are given below, showing how changes in ACH and door status affect the percentage of DPM particles are removed (efficiency)</p>
 
 						<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
 							<a href="images/ansys_T.jpeg" class="image fit thumb">
@@ -568,7 +589,7 @@
 						</div>
 					</div>
 
-					<p style="color: #333;">The transient simulations show that the particles are advected by breathing, they do not spread rapidly in this scenario, but they would be very problematic for close contact. The next simulatio shows DPM spreading for a 10m/s uncovered cough.</p>
+					<p style="color: #333;">The transient simulations show that the particles are advected by breathing, they do not spread rapidly in this scenario, but they would be very problematic for close contact. The next simulation shows DPM spreading for a 10m/s uncovered cough.</p>
 
 					<div class="row gtr-50 gtr-uniform">
 						<div class="col-4 col-12-mobile">
@@ -648,11 +669,11 @@
 						</table>
 					</div>
 
-					<p style="color: #333;">In the closed door steady state parameter study it was clear that increasing ACH also increased ventilation effectiveness. However, results suggested that increasing the ACH rate beyond 3 did not produce much difference in effectiveness. Opening the door clearly allowed for easier escape of the COVID particles from the room. Also, by placing an outlet on the edge that was almost the full height of the domain, vertically dispersed particles were more likely to escape. It was difficult to use the transient (door closed) results to evaluate the effectiveness of increased ACH with respect to improving particle ejection from the room. However, visualization of the particle cloud was useful to infer how ACH affects particle distribution and recirculation. Overall, the results of this study suggested that increasing the number and area of outlets were most effective at particle ejection, with changes to ACH and adding inlet vents less so. Increasing the flow rate dispersed the particles further and more quickly, which was beneficial with the presence of the open door. These recommendations could be used to address safety concerns for future ariborne viral illnesses.</p>
+					<p style="color: #333;">In the closed door steady state parameter study it was clear that increasing ACH also increased ventilation effectiveness. However, results suggested that increasing the ACH rate beyond 3 did not produce much difference in effectiveness. Opening the door clearly allowed for easier escape of the COVID particles from the room. Also, by placing an outlet on the edge that was almost the full height of the domain, vertically dispersed particles were more likely to escape. It was difficult to use the transient (door closed) results to evaluate the effectiveness of increased ACH with respect to improving particle ejection from the room. However, visualization of the particle cloud was useful to infer how ACH affects particle distribution and recirculation. Overall, the results of this study suggested that increasing the number and area of outlets were most effective at particle ejection, with changes to ACH and adding inlet vents less so. Increasing the flow rate dispersed the particles further and more quickly, which was beneficial with the presence of the open door. These recommendations could be used to address safety concerns for future airborne viral illnesses.</p>
 
 					</section>
 
-					<section id = 'six' class="wrapper style1">
+					<section id = 'seven' class="wrapper style1">
 						<h3 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">Ansys Certifications</h3>
 						<p style="color: #333;">Through my CFD course at UCSD, I was given the opportunity to obtain Ansys certifications. I completed five certifications in the summer after the course and was retroactively awarded another later. The certifications are as follows:
 						<p style="margin-bottom: 0.5em;"><strong style="color: #333;">Ansys Professional</strong></p>
@@ -687,10 +708,11 @@
 
 					</section>
 
-					</section id="conclusion" class="wrapper style1">
+					</section id="eight" class="wrapper style1">
 						<h3 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">Conclusion</h3>
 						<p style="color: #333;">In conclusion, I have gained experience both developing my own CFD solvers in MATLAB and applying an industry-standard product like Ansys Fluent to a real-world problem. I have a strong fundamental understanding for how CFD solvers work, and the problems that occur when developing them and using them. I also have shown my ability to visualize CFD solutions, key variable fields, grid refinements, and other deliverables.</p>
 								
+					</section>
 			</div>
 
 								

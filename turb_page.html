@@ -111,7 +111,7 @@
 								<a href="images/LJ_canyon_satellite.jpg" class="image fit thumb">
 									<img src="images/LJ_canyon_satellite.jpg" alt="..." style="width: 100%; height: 250px; object-fit: cover;" />                </a>
 								<p style="color: #333; margin-top: 0.8em;">
-									<strong style="color: #333">LJ Canyon Bathymetry overlayed on satellite image. </strong><a href="https://www.sciencedirect.com/science/article/pii/S0278434316301297" target="_blank">Source</a> </p>
+									<strong style="color: #333">LJ Canyon Bathymetry overlaid on satellite image. </strong><a href="https://www.sciencedirect.com/science/article/pii/S0278434316301297" target="_blank">Source</a> </p>
 							</div>
 
 							<!-- Right Image -->
@@ -131,7 +131,7 @@
     <div class="inner">
         <p style="color: #333;">There are many ways to measure the strength of turbulence, such as hot wires, laser Doppler techniques, and acoustics. In the ocean, we target variables that we know turbulence will affect, flow velocity and temperature. </p>
         <p style="color: #333;">Eddies has a distinct signature in the structure of fluid velocity, and as they break down from turbulence, the structure breaks down. This change is observed through creating spectra of the velocity timeseries. Spectra show much energy is contained within different length scales, and naturally it should decay as turbulence breaks things down. We apply a similar technique with temperature, turbulence should take temperature variations that exist in eddies and smooth them out as the eddies break down. </p>
-        <p style="color: #333;">Velocity can also be used to find turbulent dissipation by looking at structure functions. The idea here is that the velocity within an eddy is highly correlated, and velocities outside of the eddy are not. The rate at which velocity decorrelates from a fixed starting point yields the strength of the turbulence.</p>
+        <p style="color: #333;">Velocity can also be used to find turbulent dissipation by looking at structure functions. The idea here is that the velocity within an eddy is highly correlated, and velocities outside of the eddy are not. The rate at which velocity de-correlates from a fixed starting point yields the strength of the turbulence.</p>
         <p style="color: #333;">Finally, turbulent dissipation can be found by looking at temperature measurements. In the ocean, the water gets cooler as it gets deeper (in relatively shallow depths). When an eddy rolls through a sensor array, it is rotating fluid in a circular fashion. This takes water and flips it, displacing colder water on top of warmer water. This creates an instability and leads to mixing. It is hypothesized that the strength of the turbulence is related to how far the cold water gets flipped over, and the amount of stratification, which is a barrier to turbulence. </p>
 
         <!-- FIRST IMAGE (Left as original) -->
@@ -221,7 +221,7 @@
 					<section id="six">
 						<h2 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">Visualizing Turbulent Dissipation</h2>
 							<div class="inner">
-								<p style="color: #333;">Quality control is applied to the raw data shown in the previous section. Details are a little extensive for the overview here, but they involve removing velocity spikes, data with bad correlation, adjsuting artificial sensor biases, and more. After that, turbulent dissipation is found in the four ways described previously. First we will look at velocity spectra. </p>
+								<p style="color: #333;">Quality control is applied to the raw data shown in the previous section. Details are a little extensive for the overview here, but they involve removing velocity spikes, data with bad correlation, adjusting artificial sensor biases, and more. After that, turbulent dissipation is found in the four ways described previously. First we will look at velocity spectra. </p>
 
 								<h3 style="text-align: center; font-weight: bold; font-size: 20px; color: #333;">Velocity Spectra</h3>
 
@@ -240,7 +240,7 @@
 										<img src="images/velo_spec.jpeg" alt="Velocity Spectra" />
 									</a>
 									<p style="color: #333; margin-top: 0.8em;">
-										<strong style="color: #333">One example of a 20 minute vertical velocity spectrum. Turbulence theory (Kolmogorov's Hypothesis) states that the energy cascade should follow a -5/3 slope (in loglog space) for turbulence to be present. The strength of the turbulence depends on the PSD value where the slope matches -5/3. We can see the region >10 m^-1 is close to -5/3.
+										<strong style="color: #333">One example of a 20 minute vertical velocity spectrum. Turbulence theory (Kolmogorov's Hypothesis) states that the energy cascade should follow a -5/3 slope (in log-log space) for turbulence to be present. The strength of the turbulence depends on the PSD value where the slope matches -5/3. We can see the region >10 m^-1 is close to -5/3.
 								</div>
 							
 								<h3 style="text-align: center; font-weight: bold; font-size: 20px; color: #333;">Structure Functions</h3>
@@ -264,7 +264,7 @@
 								</div>
 
 								<h3 style="text-align: center; font-weight: bold; font-size: 20px; color: #333;">Thorpe Scale</h3>
-								<p style="color: #333;">The Thorpe scale measures the strength of turbulence by tracking how far water is displaced vertically during a turbulent event. These overturns are easily viewable in the raw temperature signal. The strengthe of turbulence depends on both the size of the overturn and the level of stratification across the overturns vertical range. Stratification is a measure of the vertical density gradient in the ocean. If there is a large gradient, the stratification is high, and vice versa. Stratification is a barrier to turbulence, so a smaller overturn in a highly stratified environment could be equivalent to a large overturn in a less stratified environment.</p>
+								<p style="color: #333;">The Thorpe scale measures the strength of turbulence by tracking how far water is displaced vertically during a turbulent event. These overturns are easily viewable in the raw temperature signal. The strength of turbulence depends on both the size of the overturn and the level of stratification across the overturns vertical range. Stratification is a measure of the vertical density gradient in the ocean. If there is a large gradient, the stratification is high, and vice versa. Stratification is a barrier to turbulence, so a smaller overturn in a highly stratified environment could be equivalent to a large overturn in a less stratified environment.</p>
 								<div class="image-block" style="margin-bottom: 2em; max-width: 75%; margin-left: auto; margin-right: auto;">
 									<a href="images/oturn.jpeg" class="image fit thumb">
 										<img src="images/oturn.jpeg" alt="Temperature Overturns" />
@@ -340,7 +340,7 @@
 										<img src="images/eps_comp.jpeg" alt="Turbulent Dissipation" />
 									</a>
 									<p style="color: #333; margin-top: 0.8em;">
-										<strong style="color: #333">The results of turbulent dissipation for a cold bore event. The temperature based dissipation methods, Thorpe scale and temperature variance, show clear vertical resolution in the bottom 12 meters. The main event spans the full vertical range, but smaller less energetic evens are suspended at different vertical locations. In fact, there is a signficant amount of lingering turbulence after the main event, the ocean is nearly constantly in a state of overturning. The ADCP-based dissipation methods, velocity spectra and structure functions, only cover the bottom 2 meters, so they are more like point measurements. The bottom plot shows 1:1 comparisons of the four methods. All methods are depth-averaged, and the temperature-based methods are time-averaged to match the 20 minute clock of the ADCP methods. All four methods agree during the main event, but begin to differ elsewhere. 
+										<strong style="color: #333">The results of turbulent dissipation for a cold bore event. The temperature based dissipation methods, Thorpe scale and temperature variance, show clear vertical resolution in the bottom 12 meters. The main event spans the full vertical range, but smaller less energetic evens are suspended at different vertical locations. In fact, there is a significant amount of lingering turbulence after the main event, the ocean is nearly constantly in a state of overturning. The ADCP-based dissipation methods, velocity spectra and structure functions, only cover the bottom 2 meters, so they are more like point measurements. The bottom plot shows 1:1 comparisons of the four methods. All methods are depth-averaged, and the temperature-based methods are time-averaged to match the 20 minute clock of the ADCP methods. All four methods agree during the main event, but begin to differ elsewhere. 
 								</div>
 							
 								<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">

@@ -62,7 +62,7 @@
 					<h2 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">Why Study Underwater Acoustics?</h2>
 						
 					<div class="inner">
-						<p style="color: #333;">Acoustics are essential to studying biological, geological, and anthropogenic activity in the ocean. Particularly for biologcal actitivty: species presence, population estimates, species dynamics are all heavily dependant on stuydying acoustic signatures. Alternative methods include visual observations, where species dynamics are estimated based on human-observed surfacing behavior, or tagging, where sensors are fixed to animals and record kinematic and oceanographic data. These methods limited as animal behavior extends vastly beyond what can be seen during surfaces, surface events are sparse, and ship time is expensive. Tagging can potentially yield a lot of data, but requires animal surfacings, precise tag application, and is limited by battery life. Acoustics are the most fruitful method, underwater microphones, or hydrophones, can be deployed for months to years at a time and record nearly all sounds, including some that have propagated from across the globe.</p>	
+						<p style="color: #333;">Acoustics are essential to studying biological, geological, and anthropogenic activity in the ocean. Particularly for biological activity: species presence, population estimates, species dynamics are all heavily dependant on studying acoustic signatures. Alternative methods include visual observations, where species dynamics are estimated based on human-observed surfacing behavior, or tagging, where sensors are fixed to animals and record kinematic and oceanographic data. These methods limited as animal behavior extends vastly beyond what can be seen during surfaces, surface events are sparse, and ship time is expensive. Tagging can potentially yield a lot of data, but requires animals to surface, precise tag application, and is limited by battery life. Acoustics are the most fruitful method, underwater microphones, or hydrophones, can be deployed for months to years at a time and record nearly all sounds, including some that have propagated from across the globe.</p>	
 						<div class="image-block" style="margin-bottom: 2em;">
 							<a href="images/noaa.jpeg" class="image fit thumb">
 								<img src="images/noaa.jpeg" alt="NOAA" />
@@ -70,7 +70,7 @@
 							<p style="color: #333; margin-top: 0.8em;">
 								<strong style="color: #333">Graphic displaying sources of underwater noise.</strong><a href="https://www.fisheries.noaa.gov/national/science-data/ocean-noise" target="_blank"> Source</a> </p>
 						</div>
-						<p style="color: #333;">The Scripps Whale Acoustics Laboratory focuses primarily on marine mammals, but is also heavily invested in noise created by ships of various types. They, and other labs in the Marine Bioacoustic Research Collaboative have performed studies all over the world: locally in the Southern California Bight, further in the Pacific like Hawaii, the Atlantic ocean, Antarctica, and the Canadian Arctic. The lab developed their own hydrophones in house, they typically record continuously at 200kHz to resolve as many relevant frequencies as posssible.</p>
+						<p style="color: #333;">The Scripps Whale Acoustics Laboratory focuses primarily on marine mammals, but is also heavily invested in noise created by ships of various types. They, and other labs in the Marine Bioacoustic Research Collaborative have performed studies all over the world: locally in the Southern California Bight, further in the Pacific like Hawaii, the Atlantic ocean, Antarctica, and the Canadian Arctic. The lab developed their own hydrophones in house, they typically record continuously at 200kHz to resolve as many relevant frequencies as possible.</p>
 						<div class="image-block" style="margin-bottom: 2em;">
 								<a href="images/bluewhale.jpg" class="image fit thumb">
 									<img src="images/bluewhale.jpg" alt="Blue Whale" />
@@ -148,7 +148,7 @@
 								<img src="images/strumming.jpeg" alt="Strumming Signals" />
 							</a>
 							<p style="color: #333; margin-top: 0.8em;">
-								<strong style="color: #333">Strumming signals, which are large high intensity pulses. These are made when the mooring line that the hydrophone is attached to oscillates in high currentsand physically hits the hydrophone.</strong>
+								<strong style="color: #333">Strumming signals, which are large high intensity pulses. These are made when the mooring line that the hydrophone is attached to oscillates in high currents and physically hits the hydrophone.</strong>
 							</p>
 						</div>
 
@@ -160,8 +160,8 @@
 						<section id="five">
 							<h2 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">Signal Detection Algorithms</h2>
 							<div class="inner">
-								<p style="color: #333;">One challenge with processing acoustic timeseries data is how long the deployments are. Deployments oftentimes are roughly 1 year long, and the signals we are searching for are only a few seconds long. So a human analyst would need to go through a year of data essentially minute-by-minute, which is not practical, especially if there are mutiple deployments. Instead the lab turns to signal detection algorithms to automatically locate signals of interest. </p>
-								<p style="color: #333;">One of the simplest algorithms is the energy detector. This algorithm scans the data in chunks andf searches for spikes in energy, since a biological vocalization would, at its core, be an energy spike at specific frequencies. Energy detectors can look within specific frequency bands and collect data about the spike, which can help narrow down whether or not the detection is a true signal of interest or a false positive. </p>
+								<p style="color: #333;">One challenge with processing acoustic timeseries data is how long the deployments are. Deployments oftentimes are roughly 1 year long, and the signals we are searching for are only a few seconds long. So a human analyst would need to go through a year of data essentially minute-by-minute, which is not practical, especially if there are multiple deployments. Instead the lab turns to signal detection algorithms to automatically locate signals of interest. </p>
+								<p style="color: #333;">One of the simplest algorithms is the energy detector. This algorithm scans the data in chunks and searches for spikes in energy, since a biological vocalization would, at its core, be an energy spike at specific frequencies. Energy detectors can look within specific frequency bands and collect data about the spike, which can help narrow down whether or not the detection is a true signal of interest or a false positive. </p>
 							    <p style="color: #333;">The algorithm I used was the Generalized Power Law (GPL) detector developed by Tyler Helble and published in 2012. <a href="https://pubmed.ncbi.nlm.nih.gov/22501048/" target="_blank"> Source. </a>The GPL detector was an energy detector in simplest terms, but the theory behind it is quite complex, and it's performance excelled at detecting humpback whale vocalizations. The idea behind the detector was to isolate data into 75-second chunks, identify a noise floor for the chunk using whitening and a power-law greater than two, and then remove background noise. After the process is finished, the only signals left in the window should be those of interest.
 							
 									<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
@@ -169,7 +169,7 @@
 											<img src="images/gpl.jpeg" alt="GPL Detector Algorithm" />
 										</a>
 										<p style="color: #333; margin-top: 0.8em;">
-											<strong style="color: #333">The top subplot shows a spectrogram of one 75-second chunk of data. The GPL detector takes that spectrogram, creates a timeseries pertaining to the energy level in each time bin, then applies a threshold. The middle subplot shows the thresholding process. The black line is the noise floor, any values below this are ignored. The green line is the signal detection threshold, any values above this, and down to the noise floor are detections. The bottom subplot shows the spectrogram with only the time regions containing detections are visible.</strong>
+											<strong style="color: #333">The top subplot shows a spectrogram of one 75-second chunk of data. The GPL detector takes that spectrogram, creates a timeseries pertaining to the energy level in each time bin, then applies a threshold. The middle subplot shows the threshold process. The black line is the noise floor, any values below this are ignored. The green line is the signal detection threshold, any values above this, and down to the noise floor are detections. The bottom subplot shows the spectrogram with only the time regions containing detections are visible.</strong>
 										</p>
 									</div>
 
@@ -186,9 +186,9 @@
 										</p>
 									</div>
 
-									<p style="color: #333">I also was tasked with reviewing and improving the GPL detector MATLAB code. I added documentation, some minor optimizations, and implemented new sections so that the detector is compatible wioth newer audio data.</p>
+									<p style="color: #333">I also was tasked with reviewing and improving the GPL detector MATLAB code. I added documentation, some minor optimizations, and implemented new sections so that the detector is compatible with newer audio data.</p>
 									
-									<p style="color: #333">I also implemented new functions to the GPL detector. Most of the functions were extra measurement parameters: when the GPL detector locates a call, it performs simple measurements of the call such as duration and frequency bandwidth. I added more measurements, allowing for more robust identiifcation of similar signals in future work. </p>
+									<p style="color: #333">I also implemented new functions to the GPL detector. Most of the functions were extra measurement parameters: when the GPL detector locates a call, it performs simple measurements of the call such as duration and frequency bandwidth. I added more measurements, allowing for more robust identification of similar signals in future work. </p>
 									<p style="color: #333">GPL detector additions:</p>
 									<ul style="color: #333;">
 										<li>Distribution of detections into multiple files.</li>
@@ -203,7 +203,7 @@
 										<li>Added option to compute peak frequency</li>
 										<li>Added option to compute the peak-to-peak received level</li>
 										<li>Added options for RMS RL, P2P RL, and SEL to use -3 dB, -10 dB, 90% cumulative energy, and 97% cumulative energy methods for computation</li>
-										<li>Compatability with deck test single cuty cycle</li>
+										<li>Compatibility with deck test single duty cycle</li>
 									</ul>
 
 							</div>
@@ -212,7 +212,7 @@
 							<section id="six">
 								<h2 style="text-align: center; font-weight: bold; font-size: 24px; color: #333;">Manual Detection Reviewer</h2>
 								<div class="inner">
-									<p style="color: #333;">The GPL detector struggled greatly when it came to low-frequency signals in environments with high ambient noise, such as the Arctic. In order to succesfully identify 98% of all manually-flagged signals (~650 over 2 months of data), it had 3 orders of magnitude more false positives (~500,000). This is not reasonable for a human to analyze, in fact it would be quicker to manually annotate a timeseries without even running the detector. I shifted to a new task, manual detection review of signals that have already been flagged by a human reviewer. The lab had other students that had scanned through timeseries data and recorded signals of interest. However, there was no way to go back through these signals and extract identifying parameters like received level. The GPL detector makes these measurements, but it was only able to do batch detections. I developed a program for users to rapidly review manual detections and extract all relevant parameters.</p>
+									<p style="color: #333;">The GPL detector struggled greatly when it came to low-frequency signals in environments with high ambient noise, such as the Arctic. In order to successfully identify 98% of all manually-flagged signals (~650 over 2 months of data), it had 3 orders of magnitude more false positives (~500,000). This is not reasonable for a human to analyze, in fact it would be quicker to manually annotate a timeseries without even running the detector. I shifted to a new task, manual detection review of signals that have already been flagged by a human reviewer. The lab had other students that had scanned through timeseries data and recorded signals of interest. However, there was no way to go back through these signals and extract identifying parameters like received level. The GPL detector makes these measurements, but it was only able to do batch detections. I developed a program for users to rapidly review manual detections and extract all relevant parameters.</p>
 								
 									<p style="color: #333;">The program was written in MATLAB and it uses hotkeys for review rather than buttons in a GUI. The program loops over each manually flagged detection, runs the GPL detector over a 75-second window containing the detection, then presents the user with the spectrogram displaying the GPL detections and the manually-flagged detection. The user then selects which GPL detection corresponds to the manual detection.I named the program "GPL Fetch".</p>
 
@@ -225,7 +225,7 @@
 										</p>
 									</div>
 
-									<p style="color: #333;">GPL Fetch will loop over all manually-flagged detections, dispalying the window for review, and saving all relevant parameters for GPL detections that are paired to manual ones. All work is done in the command window, and progress is automatically saved, allowing for pausing and returning later for another session. GPL Fetch is also equipped to handle edge cases, this is called special case mode. If the user comes across an anomaly, they may enter special case mode and record a series of commands.</p>
+									<p style="color: #333;">GPL Fetch will loop over all manually-flagged detections, displaying the window for review, and saving all relevant parameters for GPL detections that are paired to manual ones. All work is done in the command window, and progress is automatically saved, allowing for pausing and returning later for another session. GPL Fetch is also equipped to handle edge cases, this is called special case mode. If the user comes across an anomaly, they may enter special case mode and record a series of commands.</p>
 
 									<p style="color: #333;">Examples of special cases that GPL Fetch can handle:</p>
 									<ul style="color: #333;">
@@ -253,7 +253,7 @@
 											<img src="images/gpl_fetch_ex1.jpeg" alt="GPL Fetch Algorithm" />
 										</a>
 										<p style="color: #333; margin-top: 0.8em;">
-											<strong style="color: #333">An example of a GPL Fetch window with special cases. The orginal detection at "4" has been replaced with "multiple detections span current call", and calls 4,5, and 6 are marked. Calls 21 and 25 are added as adhoc detections. All special cases will visually show the user what has been selected.</strong>
+											<strong style="color: #333">An example of a GPL Fetch window with special cases. The original detection at "4" has been replaced with "multiple detections span current call", and calls 4,5, and 6 are marked. Calls 21 and 25 are added as adhoc detections. All special cases will visually show the user what has been selected.</strong>
 										</p>
 									</div>
 
@@ -286,7 +286,7 @@
 									</div>
 
 									<p style="color: #333;">In the Arctic, it was found the flow of water was so strong at relatively shallow sites that the vibration isolation rings were not enough to dampen the noise. A new device was designed to keep the hydrophone rigidly mounted without influence of the swaying mooring line. I was tasked with testing this device: the goal was to find unintended sources of noise in the new design.</p>
-									<p style="color: #333;">I designed a series of tests for the testing rig, they involved applying taps and swaying motions to the protorype while live recording audio using the hydrophone. I also used a GoPro to record motion of the hydrophone relative to it's frame. Taps and swaying motions at varying speeds were applied to various parts of the prototype and signatures in the produced spectrograms were analyzed.</p>
+									<p style="color: #333;">I designed a series of tests for the testing rig, they involved applying taps and swaying motions to the prototype while live recording audio using the hydrophone. I also used a GoPro to record motion of the hydrophone relative to it's frame. Taps and swaying motions at varying speeds were applied to various parts of the prototype and signatures in the produced spectrograms were analyzed.</p>
 								
 									<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
 										<a href="images/hmt1.jpeg" class="image fit thumb">
@@ -303,11 +303,11 @@
 											<img src="images/hmt2.jpeg" alt="Hydrophone Mount Testing" />
 										</a>
 										<p style="color: #333; margin-top: 0.8em;">
-											<strong style="color: #333">An example of kineamtic motion results for one hypdrophone mount test. Two markers were placed in the cameras view and were used to track motion. We can see increased amplitude noise when the vertical displacements are larger, as well as wide frequency bandwidth pulses also at the same time as large displacements.</strong>
+											<strong style="color: #333">An example of kinematic motion results for one hydrophone mount test. Two markers were placed in the cameras view and were used to track motion. We can see increased amplitude noise when the vertical displacements are larger, as well as wide frequency bandwidth pulses also at the same time as large displacements.</strong>
 										</p>
 									</div>
 
-									<p style="color: #333;">The results of the tests were used to recommend a few small changes to the hydrophone design, specifically with how the cable tether was attached to the mount. There were several limitations, most notably that accurate oceanic conditions were not fully utilized in the tests. Future tests would need to use a waetr tank with currents applied for a true response.</p>
+									<p style="color: #333;">The results of the tests were used to recommend a few small changes to the hydrophone design, specifically with how the cable tether was attached to the mount. There were several limitations, most notably that accurate oceanic conditions were not fully utilized in the tests. Future tests would need to use a water tank with currents applied for a true response.</p>
 								
 									<p style="color: #333;">The prototype was deployed in the field for a short test run. Unintended noise was found in the results when the instrument came back out of the water, namely pulses every second. This contaminated the spectrum and spectrogram with spikes, and blocked any other meaningful signal.</p>
 									<div class="image-block" style="margin-bottom: 2em; max-width: 100%; margin-left: auto; margin-right: auto;">
@@ -334,7 +334,7 @@
 											<img src="images/qk3.jpeg" alt="Hydrophone Mount Testing" />
 										</a>
 										<p style="color: #333; margin-top: 0.8em;">
-											<strong style="color: #333">The bottom subplot here shows at what time in the second that the pulses occured. They were quite short, occcuring near the end of each second. They drifted and jumped to be earlier and earlier in the second over time. </strong>
+											<strong style="color: #333">The bottom subplot here shows at what time in the second that the pulses occurred. They were quite short, occurring near the end of each second. They drifted and jumped to be earlier and earlier in the second over time. </strong>
 										</p>
 									</div>
 
@@ -345,7 +345,7 @@
 											<img src="images/qk4.jpeg" alt="Hydrophone Mount Testing" />
 										</a>
 										<p style="color: #333; margin-top: 0.8em;">
-											<strong style="color: #333">The process of removing the pulses involved locating them in the second, setting a threshold and identifying where the pulses start and stop. The stopping point was challenging since each pulse had to recover back to the orignal baseline level. After the pulse was removed, the acoustic signal was interpolated through the gap, the safest option since there was no way to know what the true signal was at that time.</strong>
+											<strong style="color: #333">The process of removing the pulses involved locating them in the second, setting a threshold and identifying where the pulses start and stop. The stopping point was challenging since each pulse had to recover back to the original baseline level. After the pulse was removed, the acoustic signal was interpolated through the gap, the safest option since there was no way to know what the true signal was at that time.</strong>
 										</p>
 									</div>
 
